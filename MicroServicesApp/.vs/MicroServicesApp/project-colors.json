@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d0faa765-b84b-487b-82a6-17e9209fb3a8": {
+      "ProjectGuid": "d0faa765-b84b-487b-82a6-17e9209fb3a8",
+      "DisplayName": "ResourceApi",
+      "ColorIndex": 0
+    },
+    "62b09680-ba27-498a-85eb-1ab8c634df62": {
+      "ProjectGuid": "62b09680-ba27-498a-85eb-1ab8c634df62",
+      "DisplayName": "IdentityApi",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
