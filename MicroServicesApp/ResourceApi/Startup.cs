@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +15,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
+using ResourceApi.Data.optionsModels;
 
 namespace ResourceApi
 {
@@ -29,12 +32,41 @@ namespace ResourceApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+
             services.AddScoped<ITestRepository, TestsRepository>();
             services.AddDbContext<AppDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ResourceApi", Version = "v1" });
+            });
+            services.AddCors(o =>
+            {
+                o.AddDefaultPolicy(opt =>
+                {
+                    opt.AllowAnyHeader();
+                    opt.AllowAnyMethod();
+                    opt.AllowAnyOrigin();
+                    });
+            });
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = authOptions.Issuer,
+
+                    ValidateAudience = true,
+                    ValidAudience = authOptions.Audience,
+
+                    ValidateLifetime = true,
+
+                    IssuerSigningKey = authOptions.GetSymetricSecurityKey(),
+                    ValidateIssuerSigningKey = true
+                };
             });
         }
 
@@ -49,9 +81,10 @@ namespace ResourceApi
             }
 
             app.UseRouting();
+            app.UseCors();
 
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

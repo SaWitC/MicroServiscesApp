@@ -22,7 +22,6 @@ C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -58,3 +57,5 @@ C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\obj\Debug
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\obj\Debug\net5.0\ref\ResourceApi.dll
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\obj\Debug\net5.0\ResourceApi.pdb
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\obj\Debug\net5.0\ResourceApi.genruntimeconfig.cache
+C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\obj\Debug\net5.0\staticwebassets\ResourceApi.StaticWebAssets.xml
+C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
