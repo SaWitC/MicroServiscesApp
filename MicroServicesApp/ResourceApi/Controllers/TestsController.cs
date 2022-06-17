@@ -19,7 +19,7 @@ namespace ResourceApi.Controllers
        // private string UserName => User.Claims.Single(c => c.Type == ClaimTypes.).Value.ToString();
         private Guid Id => Guid.Parse(User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value);
 
-        private ITestRepository _testRepository;
+        //private ITestRepository _testRepository;
         public TestsController(ITestRepository testRepository) : base(testRepository)
         {
 
@@ -34,41 +34,50 @@ namespace ResourceApi.Controllers
             return Ok("no name");
 
         }
-        [HttpGet]
+        [HttpPost]
         [Route("api/[controller]/[action]")]
         [Authorize]
-        public async Task<IActionResult> CreateTest(byte Quests)
+        public async Task<IActionResult> CreateTest(TestModel test)
         {
-            if (Quests > 0 && Quests < 100)
+            if (Id != Guid.Empty)
             {
-                return Ok(Quests+Id.ToString());
+                test.AvtorId = Id.ToString();
+                if (ModelState.IsValid)
+                {
+                    var resoult = await _testRepository.CreateTestAsync(test);
+                    if (resoult)
+                    {
+                        return Ok();
+                    }
+                }
             }
             return BadRequest();
         }
-        [HttpPost]
-        [Route("api/[controller]/[action]")]
+        //[HttpPost]
+        //[Route("api/[controller]/[action]")]
 
-        public async Task<IActionResult> CreateTest(TestModel model, byte Quests)
-        {
-            try
-            {
-                var quests =new List<Quest>();
-                var result =await _testRepository.CreateTestAsync(model,quests);
-                if (result)
-                {
-                    return Ok();
-                }
-                else
-                {
-                    return BadRequest();
-                }
-            }
-            catch (System.Exception)
-            {
+        //public async Task<IActionResult> CreateTest(TestModel model, byte Quests)
+        //{
+        //    return Ok();
+        //    try
+        //    {
+        //        var quests = new List<Quest>();
+        //        var result = await _testRepository.CreateTestAsync(model, quests);
+        //        if (result)
+        //        {
+        //            return Ok();
+        //        }
+        //        else
+        //        {
+        //            return BadRequest();
+        //        }
+        //    }
+        //    catch (System.Exception)
+        //    {
 
-                throw;
-            }
-            return Ok();
-        }
+        //        throw;
+        //    }
+        //    return Ok();
+        //}
     }
 }

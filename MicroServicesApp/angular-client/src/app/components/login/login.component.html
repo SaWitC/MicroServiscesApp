@@ -1,0 +1,13 @@
+<form #form="ngForm" (ngSubmit)="login(form)">
+  <div *ngIf="invalidLogin">Incorrect username or password</div>
+
+  <br />
+  <label for="userName">User Name</label>
+  <input id="userName" name="userName"  ngModel required autofocus />
+
+  <label for="password">User Name</label>
+  <input id="password" name="password" ngModel required  type="password"/>
+
+
+  <button class="" type="submit">submit</button>
+</form>

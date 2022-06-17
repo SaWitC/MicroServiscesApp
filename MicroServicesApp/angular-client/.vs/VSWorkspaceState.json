@@ -3,8 +3,12 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Models"
+    "\\src\\app\\components",
+    "\\src\\app\\components\\home",
+    "\\src\\app\\components\\login",
+    "\\src\\app\\Models",
+    "\\src\\app\\services",
+    "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\Models\\Quest.ts",
   "PreviewInSolutionExplorer": false
 }

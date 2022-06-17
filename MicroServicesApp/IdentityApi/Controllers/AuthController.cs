@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Text.Json;
 using System.Threading.Tasks;
 using IdentityApi.Data.optionsModels;
 using IdentityApi.Models;
@@ -37,12 +38,19 @@ namespace IdentityApi.Controllers
             if (ModelState.IsValid)
             {
                 var user = new User() { UserName = model.UserName, Email = model.Email };
-                var resoult = await _userManager.CreateAsync(user, model.Password);
-                if (resoult.Succeeded)
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
                 {
+                    var res =await _userManager.AddToRoleAsync(user,"user");
+                    if (res.Succeeded)
+                    {
+                        await _signInManager.SignInAsync(user, false);
+
+                        return Ok();
+                    }
+                    
                     //var createduser = _userManager.FindByNameAsync(user.UserName);
-                    await _signInManager.SignInAsync(user, false);
-                    return Ok();
+                    
                 }
 
                 return BadRequest("Can not register");
@@ -65,7 +73,10 @@ namespace IdentityApi.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
                     if (result.Succeeded)
                     {
-                        return Ok(_accountRepository.GenerateJWTToken(user));
+
+                        var token = await _accountRepository.GenerateJWTToken(user);
+                        return Ok(new {Token=token});
+                        //return Ok(res);
                     }
                 }
 

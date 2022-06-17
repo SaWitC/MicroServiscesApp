@@ -8,6 +8,6 @@ namespace IdentityApi.Data.Interfaces
 {
     public interface IAccountRepository
     { 
-        string GenerateJWTToken(User user);
+        Task<string> GenerateJWTToken(User user);
     }
 }

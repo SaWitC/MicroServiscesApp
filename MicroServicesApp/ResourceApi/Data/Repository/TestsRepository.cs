@@ -23,26 +23,37 @@ namespace ResourceApi.Data.Repository
         {
            return await _context.testModels.Take(size).Skip(page * size).ToListAsync();
         }
-        public async Task<bool> CreateTestAsync(TestModel model, List<Quest> quests)
+        public async Task<bool> CreateTestAsync(TestModel model)
         {
-            if (model == null&&model.Quests.Count()>0)
+            if (model != null)
             {
-                var Quests = new List<Models.Quest>();
-                
-                var entity =await _context.testModels.AddAsync(model);
-                if (entity != null)
+                if (!string.IsNullOrEmpty(model.AvtorId) && !string.IsNullOrEmpty(model.Title))
                 {
-                    foreach (var item in quests)
-                    {
-                        item.TestId = entity.Entity.Id;
-                        Quests.Add(item);
-                    }
-                    await _context.Quests.AddRangeAsync(Quests);
+                    await _context.testModels.AddAsync(model);
+                    await _context.SaveChangesAsync();
+                    return true;
                 }
-                return false;
-                
             }
+
             return false;
+            //if (model == null&&model.Quests.Count()>0)
+            //{
+            //    var Quests = new List<Models.Quest>();
+
+            //    var entity =await _context.testModels.AddAsync(model);
+            //    if (entity != null)
+            //    {
+            //        foreach (var item in quests)
+            //        {
+            //            item.TestId = entity.Entity.Id;
+            //            Quests.Add(item);
+            //        }
+            //        await _context.Quests.AddRangeAsync(Quests);
+            //    }
+            //    return false;
+
+            //}
+            //return false;
         }
 
     }

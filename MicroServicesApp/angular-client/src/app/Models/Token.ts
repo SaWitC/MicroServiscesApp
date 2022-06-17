@@ -1,3 +1,3 @@
 export class Token {
-  acces_token: string;
+  acces_token: string="";
 }

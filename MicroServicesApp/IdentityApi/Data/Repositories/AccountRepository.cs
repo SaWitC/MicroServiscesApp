@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using IdentityApi.Data.Interfaces;
 using IdentityApi.Data.optionsModels;
 using IdentityApi.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -15,12 +16,14 @@ namespace IdentityApi.Data.Repositories
     public class AccountRepository : IAccountRepository
     {
         private readonly IOptions<AuthOptions> _options;
+        private readonly UserManager<User> _userManager;
 
-        public AccountRepository(IOptions<AuthOptions> options)
+        public AccountRepository(IOptions<AuthOptions> options, UserManager<User> userManager)
         {
             _options = options;
+            _userManager = userManager;
         }
-        public string GenerateJWTToken(User user)
+        public async Task<string> GenerateJWTToken(User user)
         {
             var authParams = _options.Value;
             var securityKey = authParams.GetSymetricSecurityKey();
@@ -31,10 +34,14 @@ namespace IdentityApi.Data.Repositories
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Name,user.UserName),
-                new Claim("role","user")
+                
                 
                 //new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString())
             };
+            foreach (var VARIABLE in await _userManager.GetRolesAsync(user) )
+            {
+               claims.Add(new Claim("role", VARIABLE));
+            }
 
             var token = new JwtSecurityToken(
                 authParams.Issuer,

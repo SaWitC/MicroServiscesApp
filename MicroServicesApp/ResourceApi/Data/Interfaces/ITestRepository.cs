@@ -7,6 +7,6 @@ namespace ResourceApi.Data.Interfaces
     public interface ITestRepository
     {
         public Task<IEnumerable<TestModel>> GetTestsAsync(int size, int page);
-        public Task<bool> CreateTestAsync(TestModel model,List<Quest> quests);
+        public Task<bool> CreateTestAsync(TestModel model);
     }
 }

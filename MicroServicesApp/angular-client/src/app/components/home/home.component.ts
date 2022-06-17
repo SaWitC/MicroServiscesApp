@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,21 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  isAuhtenticated() {
+    var token: string = "";
+    token+= localStorage.getItem("jwt");
+    if (token) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+  logOut() {
+    localStorage.removeItem("jwt");
   }
 
 }
