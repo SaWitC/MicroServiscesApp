@@ -1,1 +1,13 @@
 <p>home works!</p>
+<div>
+  <div> check</div>
+  <!--<button class="btn">login</button>-->
+  <!--<label>{{invalidLogin}}</label>-->
+  <p *ngIf="(!invalidLogin);">Авторизован</p>
+  <p *ngIf="(invalidLogin);">не Авторизован</p>
+
+
+  <button *ngIf="(!invalidLogin);" (click)="logOut()">logout</button>
+
+
+</div>

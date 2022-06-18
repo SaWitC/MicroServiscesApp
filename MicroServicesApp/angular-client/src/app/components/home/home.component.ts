@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router"
+import {JwtHelperService} from "@auth0/angular-jwt";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-home',
@@ -8,24 +11,31 @@ import { NgForm } from "@angular/forms";
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  invalidLogin: boolean=true;
+
+  constructor(private router: Router,
+    private jwtHelperService: JwtHelperService,
+    private auth: AuthService) { }
+
 
   ngOnInit(): void {
+    this.invalidLogin = !this.auth.isAuhtenticated();
   }
 
-  isAuhtenticated() {
-    var token: string = "";
-    token+= localStorage.getItem("jwt");
-    if (token) {
-      return true;
-    } else {
-      return false;
-    }
+  //isAuhtenticated():boolean {
+  //  var token: string = "";
+  //  token+= localStorage.getItem("jwt");
+  //  if (token&&!this.jwtHelperService.isTokenExpired(token)) {
+  //    return true;
+  //  } else {
+  //    return false;
+  //  }
 
-  }
+  //}
 
   logOut() {
-    localStorage.removeItem("jwt");
+    this.auth.logOut();
+    this.invalidLogin = true;
   }
 
 }

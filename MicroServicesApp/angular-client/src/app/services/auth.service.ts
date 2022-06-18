@@ -17,23 +17,49 @@ export const acces_Token_Key = "ResourceAccesToken";
 })
 export class AuthService {
 
+  invalidLogin:boolean=true;
 
   constructor(
     private http: HttpClient,
-    @Inject(IdentityApi_path) private apiUrl: string,
-    private jwtHelper: JwtHelperService,
+    private jwtHelperService: JwtHelperService,
     private router:Router) { }
 
   
 
-  //isAutenticated(): boolean {
-  //  var token: string = "";
-  //   token+= localStorage.getItem(acces_Token_Key);
-  //  return token!=null&& !this.jwtHelper.isTokenExpired(token);
-  //}
+  isAuhtenticated(): boolean {
+    var token: string = "";
+    token += localStorage.getItem("jwt");
+    if (token && !this.jwtHelperService.isTokenExpired(token)) {
+      return true;
+    } else {
+      return false;
+    }
 
-  //logout():void {
-  //  localStorage.removeItem(acces_Token_Key);
-  //  this.router.navigate(['']);
-  //}
+  }
+
+  logOut() {
+    localStorage.removeItem("jwt");
+    this.invalidLogin = true;
+  }
+
+
+  login(form: NgForm) {
+    const credentails = {
+      userName: form.value.userName,
+      password: form.value.password
+    }
+
+    this.http.post("http://localhost:46574/api/Auth/api/Auth/Login", credentails).subscribe(
+      response => {
+        //const token = (<any>response).token;
+        const token: string = (<any>response).token;
+        localStorage.setItem("jwt", token);
+        this.invalidLogin = false;
+        console.log("ok");
+      },
+      err => {
+        this.invalidLogin = true;
+        console.log("error");
+      });
+  }
 }

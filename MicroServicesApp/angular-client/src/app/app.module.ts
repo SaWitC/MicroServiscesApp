@@ -12,6 +12,8 @@ import { acces_Token_Key } from './services/auth.service';
 import {environment } from "src/environments/environment";
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from "./services/auth.service";
+import { TestFormComponent } from './test-form/test-form.component';
 
 export function tokenGetter() {
   var str: string = "";
@@ -26,6 +28,7 @@ export function tokenGetter() {
     HomeComponent,
     MyTestsComponent,
     LoginComponent,
+    TestFormComponent,
     //HttpClientModule,
 
   ],
@@ -35,9 +38,17 @@ export function tokenGetter() {
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["localhost:5001"],
+        disallowedRoutes:[]
+        }
+    }),
+
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
