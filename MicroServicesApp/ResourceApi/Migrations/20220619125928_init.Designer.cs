@@ -9,7 +9,7 @@ using ResourceApi.Data;
 namespace ResourceApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220612120850_init")]
+    [Migration("20220619125928_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,10 +57,18 @@ namespace ResourceApi.Migrations
                     b.Property<bool>("ActiveHelps")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LogoImageName")
+                    b.Property<string>("AvtorId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("LogoImagPath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("QuestsCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

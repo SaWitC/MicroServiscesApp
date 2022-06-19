@@ -6,12 +6,14 @@ using ResourceApi.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
 namespace ResourceApi.Controllers
 {
+    //CRUD
     [Route("api/[controller]")]
     [ApiController]
     public class TestsController : BaseController
@@ -24,23 +26,25 @@ namespace ResourceApi.Controllers
         {
 
         }
+
+        ///R
         [HttpGet]
         [Authorize(Roles = "user")]
         public async Task<IActionResult> GetTests(string category="",int page = 0)
         {
-            //return Ok(_testRepository.GetTestsAsync(page,5)); 
-            if (!string.IsNullOrEmpty(Id.ToString())) 
-                return Ok(Id);
-            return Ok("no name");
-
+            return Ok(JsonSerializer.Serialize(await _testRepository.GetAll()));
         }
+
+        ///C
         [HttpPost]
         [Route("api/[controller]/[action]")]
         [Authorize]
+
         public async Task<IActionResult> CreateTest(TestModel test)
         {
             if (Id != Guid.Empty)
             {
+                test.QuestsCount = 0;
                 test.AvtorId = Id.ToString();
                 if (ModelState.IsValid)
                 {
@@ -53,31 +57,50 @@ namespace ResourceApi.Controllers
             }
             return BadRequest();
         }
-        //[HttpPost]
-        //[Route("api/[controller]/[action]")]
+        [HttpPatch("{Id}")]
 
-        //public async Task<IActionResult> CreateTest(TestModel model, byte Quests)
-        //{
-        //    return Ok();
-        //    try
-        //    {
-        //        var quests = new List<Quest>();
-        //        var result = await _testRepository.CreateTestAsync(model, quests);
-        //        if (result)
-        //        {
-        //            return Ok();
-        //        }
-        //        else
-        //        {
-        //            return BadRequest();
-        //        }
-        //    }
-        //    catch (System.Exception)
-        //    {
+        public async Task<IActionResult> Update(int? Id,string Title,string Image)
+        {
+            try
+            {
+                if (Id== null)
+                    return BadRequest();
 
-        //        throw;
-        //    }
-        //    return Ok();
-        //}
+                var test = await  _testRepository.GetTestNyIdAsync((int) Id);
+                if (test == null)
+                    return BadRequest("not found");
+                else
+                {
+                    if (!string.IsNullOrEmpty(Title))
+                    {
+                        test.Title = Title;
+                        var result= await  _testRepository.UpdateAsync(test);
+                        if (!result) return BadRequest();
+                    }
+                }
+                return Ok("Updated");
+            }
+            catch(Exception e)
+            {
+                return BadRequest("Error "+e.Message);
+            }
+        }
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> Delete(int Id)
+        {
+            try
+            {
+                if (Id <= 0)
+                    return BadRequest();
+                var result =await _testRepository.RemoveAsync(Id);
+                if(result)
+                    return Ok();
+                return BadRequest();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
     }
 }

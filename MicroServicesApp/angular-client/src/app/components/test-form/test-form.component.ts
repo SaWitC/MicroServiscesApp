@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
-
-import { NoteDetails } from "src/app/shared/note-details.model"
+/*import { Test } from "src/app/shared/Models/test.model"*/
+import { TestServiceService } from "../../services/test-service.service"
+import { AuthService } from "../../services/auth.service"
+/*import {HttpClient} from "@angular/common/http"*/
 
 @Component({
   selector: 'app-test-form',
@@ -11,9 +13,33 @@ import { NoteDetails } from "src/app/shared/note-details.model"
 })
 export class TestFormComponent implements OnInit {
 
-  constructor() { }
+  //list:Test[];
+
+  constructor(public testService: TestServiceService,
+    private auth:AuthService) { }
 
   ngOnInit(): void {
+    this.auth.isAuhtenticated();
+  }
+
+  Create(form: NgForm) {
+    this.testService.createTest(form).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      });
+  }
+
+  get() {
+    this.testService.GetTestes().subscribe(res => {
+      console.log(res);
+    },
+      err => {
+        console.log("get "+err);
+      })
+    
   }
 
 }

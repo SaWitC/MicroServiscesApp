@@ -12,9 +12,11 @@ namespace ResourceApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    LogoImageName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ActiveHelps = table.Column<bool>(type: "bit", nullable: false)
+                    LogoImagPath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ActiveHelps = table.Column<bool>(type: "bit", nullable: false),
+                    AvtorId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    QuestsCount = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -13,12 +13,11 @@ import {environment } from "src/environments/environment";
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from "./services/auth.service";
-import { TestFormComponent } from './test-form/test-form.component';
+import { TestFormComponent } from "./components/test-form/test-form.component"
+import {AuthGuard} from "./Guards/auth-guard-service"
 
 export function tokenGetter() {
-  var str: string = "";
-  str += localStorage.getItem(acces_Token_Key);
-  return str;
+  return localStorage.getItem("jwt");
 }
 
 
@@ -28,7 +27,7 @@ export function tokenGetter() {
     HomeComponent,
     MyTestsComponent,
     LoginComponent,
-    TestFormComponent,
+    TestFormComponent
     //HttpClientModule,
 
   ],
@@ -42,13 +41,13 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ["localhost:5001"],
+        allowedDomains: ["localhost:9410"],
         disallowedRoutes:[]
         }
     }),
 
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

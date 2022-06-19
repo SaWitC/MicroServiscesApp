@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components\\my-tests",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\home",
+    "\\src\\app\\components\\login",
     "\\src\\app\\components\\test-form",
-    "\\src\\app\\Models",
+    "\\src\\app\\Guards",
     "\\src\\app\\services",
-    "\\src\\app\\shared",
-    "\\src\\app\\shared\\Models",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\shared\\Models\\test.model.ts",
+  "SelectedNode": "\\src\\app\\components\\test-form\\test-form.component.html",
   "PreviewInSolutionExplorer": false
 }

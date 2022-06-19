@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
@@ -18,7 +19,7 @@ namespace ResourceApi.Data.Repository
             _context = context;
             _logger = logger;
         }
-
+        //R
         public async Task<System.Collections.Generic.IEnumerable<Models.TestModel>> GetTestsAsync(int size, int page = 1)
         {
            return await _context.testModels.Take(size).Skip(page * size).ToListAsync();
@@ -54,6 +55,53 @@ namespace ResourceApi.Data.Repository
 
             //}
             //return false;
+        }
+
+        public async Task<IEnumerable<TestModel>> GetAll()
+        {
+            return await _context.testModels.ToListAsync();
+        }
+
+        public async Task<TestModel> GetTestNyIdAsync(int Id)
+        {
+            return await _context.testModels.FirstOrDefaultAsync(o => o.Id == Id);
+        }
+
+        public async Task<bool> UpdateAsync(TestModel model)
+        {
+            try
+            {
+                _context.testModels.Update(model);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+
+        public async Task<bool> RemoveAsync(int Id)
+        {
+            try
+            {
+                var test =await _context.testModels.FirstOrDefaultAsync(o => o.Id == Id);
+                if (test != null)
+                {
+                    _context.testModels.Remove(test);
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+
+                return false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
         }
 
     }

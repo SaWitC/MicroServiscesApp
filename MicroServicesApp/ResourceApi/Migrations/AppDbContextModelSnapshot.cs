@@ -62,8 +62,8 @@ namespace ResourceApi.Migrations
                     b.Property<string>("LogoImagPath")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("QuestsCount")
-                        .HasColumnType("tinyint");
+                    b.Property<int>("QuestsCount")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()

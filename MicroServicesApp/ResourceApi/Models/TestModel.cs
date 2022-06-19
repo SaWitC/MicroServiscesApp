@@ -10,9 +10,8 @@ namespace ResourceApi.Models
         public string Title { get; set; }   
         public System.Collections.Generic.IEnumerable<Quest> Quests { get; set; }
         public bool ActiveHelps { get; set; }
-        [Required]
         public string AvtorId { get; set; }
-        public byte QuestsCount { get; set; }= 0;
+        public int QuestsCount { get; set; }
 
 
     }
