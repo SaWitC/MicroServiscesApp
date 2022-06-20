@@ -1,15 +1,28 @@
-<form #form="ngForm" (ngSubmit)="login(form)">
-  <div *ngIf="invalidLogin">Incorrect username or password</div>
+<div class="row w-100">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4 bg-dark">
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <div *ngIf="invalidLogin"><p class="text-dander">Incorrect username or password</p></div>
 
-  <br />
-  <label for="userName">User Name</label>
-  <input id="userName" name="userName"  ngModel required autofocus />
+      <div class="form-group m-3">
+        <label class="text-white" for="userName">Имя пользователя</label>
+        <input class="form-control-lg w-100" id="userName" placeholder="Имя пользователя" name="userName" ngModel required autofocus />
+      </div>
+      <div class="form-group m-3 ">
+        <label class="text-white" for="password">Пароль</label>
+        <input class="form-control-lg w-100" id="password" placeholder="Пароль" name="password" ngModel required type="password" />
+      </div>
 
-  <label for="password">User Name</label>
-  <input id="password" name="password" ngModel required  type="password"/>
+      <button class="btn bg-warning  m-3" type="submit">submit</button>
+    </form>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
 
 
-  <button class="" type="submit">submit</button>
-</form>
+
+
 
 

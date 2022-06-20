@@ -10,4 +10,32 @@
   <button *ngIf="(!invalidLogin);" (click)="logOut()">logout</button>
 
 
+  <div class="row w-100">
+    <div class="col-md-9">
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th>Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let pd of testService.list">
+          <td ><label> {{pd.Title}}</label>
+            <div class="card" style="width:100%;">
+              <img class="card-img-top" src="{{pd.LogoImagPath}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{pd.Title}}</h5>
+                <p class="card-text">999999999 {{pd.LogoImagPath}}</p>
+                <a href="#" class="btn btn-primary">{{pd.Title}}</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-3"></div>
+
+  </div>
+
 </div>

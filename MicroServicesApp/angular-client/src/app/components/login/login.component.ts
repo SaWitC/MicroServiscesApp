@@ -12,8 +12,7 @@ import { AuthService } from "../../services/auth.service";
 })
 export class LoginComponent {
 
-
-  invalidLogin: boolean = true
+  invalidLogin: boolean = true;
 
   constructor(
     private http: HttpClient,

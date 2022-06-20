@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-lg-5">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>LogoImagePath</th>
+          <th>Title</th>
+          <th>ActiveHelps</th>
+          <th>AvtorId</th>
+          <th>QuestCount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pd of test.list">
+          <td (click)="PutData(pd)"><label> {{pd.LogoImagPath}}</label></td>
+          <td (click)="PutData(pd)"><label> {{pd.Title}}</label></td>
+          <td (click)="PutData(pd)"> {{pd.ActiveHelps}}</td>
+          <td (click)="PutData(pd)"> {{pd.AvtorId}}</td>
+          <td (click)="PutData(pd)"> {{pd.QuestCount}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="w-100" (click)="loadTestes()">next Page</button>
+    <button class="w-100" (click)="First()">First</button>
+  </div>
+
+  <div class="col-lg-7">
+    <!--<form #form="ngForm" (submit)="Update(form)">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Title" name="Description" #Description="ngModel" [(ngModel)]="test.formData.Title"
+               required maxlength="100" />
+      </div>
+    </form>-->
+
+    <form #questForm="ngForm" *ngIf="test.formData.Id>0;else NoData">
+      
+    </form>
+    <ng-template #NoData>
+      <h1>Выберите тест(кликнув по нему) для просмотра информации</h1>
+    </ng-template>
+  </div>
+ 
+
+</div>
+
+
+
+
+<!--id: number = 0;
+logoImagePath: string = "";
+title: string = "";
+activeHelps: boolean = false;
+avtorId: string = "";
+questCount:number=0;-->

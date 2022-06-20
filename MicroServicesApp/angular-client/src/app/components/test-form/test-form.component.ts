@@ -32,14 +32,4 @@ export class TestFormComponent implements OnInit {
       });
   }
 
-  get() {
-    this.testService.GetTestes().subscribe(res => {
-      console.log(res);
-    },
-      err => {
-        console.log("get "+err);
-      })
-    
-  }
-
 }

@@ -9,10 +9,10 @@ namespace ResourceApi.Data.Interfaces
         Task<IEnumerable<TestModel>> GetTestsAsync(int size, int page);
         Task<bool> CreateTestAsync(TestModel model);
         Task<IEnumerable<TestModel>> GetAll();
-        Task<TestModel> GetTestNyIdAsync(int Id);
-
+        Task<TestModel> GetTestByIdAsync(int Id);
         Task<bool> UpdateAsync(TestModel model);
         Task<bool> RemoveAsync(int Id);
+        Task<IEnumerable<TestModel>> GetTestsByAvtorId(string Id,int size, int page = 0);
 
 
     }

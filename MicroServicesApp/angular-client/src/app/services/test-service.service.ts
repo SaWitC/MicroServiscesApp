@@ -11,13 +11,51 @@ export class TestServiceService {
   constructor(private http: HttpClient) { }
 
   formData: Test = new Test();
-  //list: Test[];
+  list: Test[];
+  listByAvtor: Test[];
+
 
   createTest(form: NgForm) {
     return this.http.post("http://localhost:9410/api/Tests/api/Tests/CreateTest",this.formData);
   }
 
-  GetTestes() {
-    return this.http.get("http://localhost:9410/api/Tests");
+  GetTestes(page:number) {
+    return this.http.get(`http://localhost:9410/api/Tests/GetTests/${page}`).toPromise()
+      .then(res => {
+        console.log("res");
+        this.list = [];
+
+        //console.log(res as Test[]);
+        this.list = res as Test[];
+      });
   }
+
+  getTestById(id: number) {
+    return this.http.get(`http://localhost:9410/api/Tests/${id}`);
+  }
+
+  refreshList() {
+    this.http.get(`http://localhost:9410/api/Tests/GetTests/0`)
+      .toPromise().then(res => {
+        this.list = res as Test[];
+
+        console.log(res as Test[]);
+      });
+  }
+
+  GetTestsByAvtor(page:number) {
+    this.http.get(`http://localhost:9410/api/Tests/GetTestsByAvtor/${page}`)
+      .toPromise().then(
+      res => {
+          this.listByAvtor = res as Test[];
+          console.log(res as Test[]);
+      })
+      .catch(
+      err => {
+        console.log(err);
+
+      });
+  }
+
+
 }

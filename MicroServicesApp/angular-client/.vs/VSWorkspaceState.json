@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\home",
-    "\\src\\app\\components\\login",
-    "\\src\\app\\components\\test-form",
-    "\\src\\app\\Guards",
+    "\\src\\app\\components\\testcomponents",
+    "\\src\\app\\components\\testcomponents\\details",
     "\\src\\app\\services",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\ViewModels",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\components\\test-form\\test-form.component.html",
+  "SelectedNode": "\\src\\app\\components\\my-tests",
   "PreviewInSolutionExplorer": false
 }

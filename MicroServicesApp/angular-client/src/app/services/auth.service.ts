@@ -55,6 +55,7 @@ export class AuthService {
         const token: string = (<any>response).token;
         localStorage.setItem("jwt", token);
         this.invalidLogin = false;
+        this.router.navigate(["/"]);
         console.log("ok");
       },
       err => {

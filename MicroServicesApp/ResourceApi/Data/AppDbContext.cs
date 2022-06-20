@@ -9,7 +9,9 @@ namespace ResourceApi.Data
         {
 
         }
-        public DbSet<Quest> Quests { get; set; } 
+        public DbSet<Quest> Quests { get; set; }
+        public DbSet<LeftAnswer> LeftAnswers { get; set; }
+
         public DbSet<TestModel> testModels { get; set; }
     }
 }

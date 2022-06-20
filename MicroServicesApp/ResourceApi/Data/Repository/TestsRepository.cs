@@ -20,9 +20,9 @@ namespace ResourceApi.Data.Repository
             _logger = logger;
         }
         //R
-        public async Task<System.Collections.Generic.IEnumerable<Models.TestModel>> GetTestsAsync(int size, int page = 1)
+        public async Task<System.Collections.Generic.IEnumerable<Models.TestModel>> GetTestsAsync(int size, int page=0)
         {
-           return await _context.testModels.Take(size).Skip(page * size).ToListAsync();
+            return await _context.testModels.Skip(page * size).Take(size).ToListAsync();
         }
         public async Task<bool> CreateTestAsync(TestModel model)
         {
@@ -62,7 +62,7 @@ namespace ResourceApi.Data.Repository
             return await _context.testModels.ToListAsync();
         }
 
-        public async Task<TestModel> GetTestNyIdAsync(int Id)
+        public async Task<TestModel> GetTestByIdAsync(int Id)
         {
             return await _context.testModels.FirstOrDefaultAsync(o => o.Id == Id);
         }
@@ -103,6 +103,12 @@ namespace ResourceApi.Data.Repository
                 return false;
             }
         }
+
+        public async Task<IEnumerable<TestModel>> GetTestsByAvtorId(string Id,int size,int page=0)
+        { 
+            return await _context.testModels.Where(o => o.AvtorId == Id).Skip(page*size).Take(size).ToListAsync();
+        }
+        
 
     }
 }

@@ -28,11 +28,22 @@ namespace ResourceApi.Controllers
         }
 
         ///R
-        [HttpGet]
-        [Authorize(Roles = "user")]
+        [HttpGet("[action]/{page}")]
+        //[Authorize(Roles = "user")]
+        
         public async Task<IActionResult> GetTests(string category="",int page = 0)
         {
-            return Ok(JsonSerializer.Serialize(await _testRepository.GetAll()));
+            var result = await _testRepository.GetTestsAsync(6, page);
+            return Ok(JsonSerializer.Serialize(result));
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetTest(int id)
+        {
+            var test = await _testRepository.GetTestByIdAsync(id);
+            if (test != null)
+                return Ok(test);
+            else
+                return Ok(null);
         }
 
         ///C
@@ -66,7 +77,7 @@ namespace ResourceApi.Controllers
                 if (Id== null)
                     return BadRequest();
 
-                var test = await  _testRepository.GetTestNyIdAsync((int) Id);
+                var test = await  _testRepository.GetTestByIdAsync((int) Id);
                 if (test == null)
                     return BadRequest("not found");
                 else
@@ -98,6 +109,21 @@ namespace ResourceApi.Controllers
                 return BadRequest();
             }
             catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("[action]/{page}")]
+        [Authorize]
+        public async Task<IActionResult> GetTestsByAvtor(int page)
+        {
+            try
+            {
+               // var tests = 
+                return Ok(JsonSerializer.Serialize(await _testRepository.GetTestsByAvtorId(Id.ToString(), 6, page)));
+            }
+            catch
             {
                 return BadRequest();
             }

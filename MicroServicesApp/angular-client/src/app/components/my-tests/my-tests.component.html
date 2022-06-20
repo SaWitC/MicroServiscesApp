@@ -1,1 +1,43 @@
-<p>my-tests works!</p>
+<!--#questForm="ngForm" *ngIf="test.formData.Id>0;else NoData"-->
+
+<!--<form>
+  <p>Выбран тест <b>{{test.formData.Title}}</b></p>
+  <input class="form-control form-control-lg" placeholder="Условие" />
+  <input class="form-control form-control-lg" placeholder="Подсказка" />
+
+  <button>Добавить вопрос</button>
+</form>-->
+
+<div class="row">
+  <div class="col-lg-5">
+    <table class="table">
+      <tbody>
+      <tr *ngFor="let pd of testService.listByAvtor">
+        <td class="text-white" (click)="PutData(pd)"><label> {{pd.Title}}</label></td>
+        <td class="text-white" (click)="PutData(pd)"> {{pd.ActiveHelps}}</td>
+        <td class="text-white" (click)="PutData(pd)"> {{pd.QuestCount}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <button class="w-100" (click)="PrewPage()">Prew Page</button>
+    <button class="w-100" (click)="NextPage()">next Page</button>
+    <button class="w-100" (click)="FirstPage()">First</button>
+  </div>
+  <div class="col-lg-7">
+
+    <form #questForm="ngForm" *ngIf="testService.formData.Id>0;else NoData">
+      <div class="card" style="width:100%;">
+        <img class="card-img-top" src="{{testService.formData.LogoImagPath}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{testService.formData.Title}}</h5>
+          <p class="card-text">999999999 {{testService.formData.LogoImagPath}}</p>
+          <a href="#" class="btn btn-primary">{{testService.formData.Title}}</a>
+        </div>
+      </div>
+    </form>
+    <ng-template #NoData>
+      <h1>Выберите тест(кликнув по нему) для просмотра информации</h1>
+    </ng-template>
+  </div>
+</div>

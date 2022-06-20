@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router"
 import {JwtHelperService} from "@auth0/angular-jwt";
-import {AuthService} from "../../services/auth.service";
+import { AuthService } from "../../services/auth.service";
+import {TestServiceService} from "../../services/test-service.service"
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   invalidLogin: boolean=true;
 
   constructor(private router: Router,
-    private jwtHelperService: JwtHelperService,
+    public testService: TestServiceService,
     private auth: AuthService) { }
 
 

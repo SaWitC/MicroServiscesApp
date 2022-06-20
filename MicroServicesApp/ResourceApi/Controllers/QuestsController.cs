@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ResourceApi.Data;
+using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
 
 namespace ResourceApi.Controllers
@@ -14,32 +16,22 @@ namespace ResourceApi.Controllers
     [ApiController]
     public class QuestsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IQuestRepository _questRepository;
+        private readonly ITestRepository _testRepository;
 
-        public QuestsController(AppDbContext context)
+
+        public QuestsController(IQuestRepository questRepository,
+            ITestRepository testRepository)
         {
-            _context = context;
+            _questRepository = questRepository;
+            _testRepository = testRepository;
         }
 
         // GET: api/Quests
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Quest>>> GetQuests()
+        [HttpGet("{Id}")]
+        public async Task<ActionResult> GetQuests(int Id)
         {
-            return await _context.Quests.ToListAsync();
-        }
-
-        // GET: api/Quests/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Quest>> GetQuest(int id)
-        {
-            var quest = await _context.Quests.FindAsync(id);
-
-            if (quest == null)
-            {
-                return NotFound();
-            }
-
-            return quest;
+            return Ok(JsonSerializer.Serialize(await _questRepository.GetQuestsByTestId(Id)));
         }
 
         // PUT: api/Quests/5
@@ -76,16 +68,16 @@ namespace ResourceApi.Controllers
         // POST: api/Quests
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Quest>> PostQuest(Quest quest,int? id)
+        public async Task<ActionResult<Quest>> Create(Quest quest,int? id)
         {
             if (id != null)
             {
-                var test =await _context.testModels.FirstOrDefaultAsync(o =>o.Id==id);
+                var test =await _testRepository.GetTestByIdAsync((int)id);
                 if (test != null)
                 {
                     quest.TestId = test.Id;
-                    _context.Quests.Add(quest);
-                    await _context.SaveChangesAsync();
+                    await _questRepository.CreateQuestAsync(quest);
+                    //await _context.SaveChangesAsync();
                     return Ok(quest);
                 }
             }
@@ -97,21 +89,20 @@ namespace ResourceApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteQuest(int id)
         {
-            var quest = await _context.Quests.FindAsync(id);
+            var quest = await _questRepository.GetQuestByid(id);
             if (quest == null)
             {
                 return NotFound();
             }
 
-            _context.Quests.Remove(quest);
-            await _context.SaveChangesAsync();
+            await _questRepository.RemoveQuestAsync(quest);
 
             return NoContent();
         }
 
-        private bool QuestExists(int id)
-        {
-            return _context.Quests.Any(e => e.Id == id);
-        }
+        //private bool QuestExists(int id)
+        //{
+        //    return _context.Quests.Any(e => e.Id == id);
+        //}
     }
 }
