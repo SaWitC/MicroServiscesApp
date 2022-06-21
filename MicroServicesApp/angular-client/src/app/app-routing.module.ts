@@ -5,7 +5,8 @@ import { MyTestsComponent } from './components/my-tests/my-tests.component';
 import { LoginComponent } from './components/login/login.component';
 import {TestFormComponent} from"./components/test-form/test-form.component"
 import { AuthGuard } from "./Guards/auth-guard-service";
-import {DetailsComponent} from "./components/testcomponents/details/details.component"
+import { DetailsComponent } from "./components/testcomponents/details/details.component"
+import { RegisterComponent } from './components/register/register.component'
 
 
 
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: "MyTests", component: MyTestsComponent, canActivate: [AuthGuard] },
   { path: "Login", component: LoginComponent },
   { path: "CreateTest", component: TestFormComponent, canActivate: [AuthGuard] },
-  { path: "Tests", component: DetailsComponent}
+  { path: "Tests", component: DetailsComponent },
+  { path: "Register", component: RegisterComponent }
+
 
 
 ];

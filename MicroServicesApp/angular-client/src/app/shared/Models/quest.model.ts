@@ -5,6 +5,8 @@ export class Quest {
   questText: string = "";
   helpText: boolean = false;
   testId: number = 0;
+  Right_answer: string;
+  //LeftAnswer[]
 }
 
 

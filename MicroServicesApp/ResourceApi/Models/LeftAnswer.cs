@@ -8,7 +8,7 @@ namespace ResourceApi.Models
     public class LeftAnswer
     {
         public int Id { get; set; }
-        
+        public int QuestId { get; set; }
         public string Title { get; set; }
     }
 }

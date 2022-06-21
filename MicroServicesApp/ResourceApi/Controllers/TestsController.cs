@@ -49,12 +49,12 @@ namespace ResourceApi.Controllers
         ///C
         [HttpPost]
         [Route("api/[controller]/[action]")]
-        [Authorize]
-
+        //[Authorize]
         public async Task<IActionResult> CreateTest(TestModel test)
         {
             if (Id != Guid.Empty)
             {
+                test.CreatedDate = DateTime.Now;
                 test.QuestsCount = 0;
                 test.AvtorId = Id.ToString();
                 if (ModelState.IsValid)

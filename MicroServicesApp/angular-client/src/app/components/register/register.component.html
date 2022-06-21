@@ -1,0 +1,69 @@
+<div class="row w-100">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4 bg-dark">
+    <form #form="ngForm" (ngSubmit)="Register(form)">
+      <!--<form  novalidate [formGroup]="reactiveForm">-->
+      <div *ngIf="invalidOperation"><p class="text-dander">Incorrect email or password</p></div>
+
+      <p class="text-white">text{{IsPassvordConfirmed}}</p>
+
+      <div class="form-group m-3">
+        <label class="text-white" for="UserName">Имя пользователя</label>
+        <input maxlength="30" required [class.invalid]="UserName.invalid && UserName.touched" class="form-control-lg w-100" id="UserName" placeholder="Имя пользователя" name="UserName" #UserName="ngModel" ngModel autofocus />
+        <div [hidden]="UserName.valid ||UserName.untouched" class="alert alert-danger">
+          поле имя обязательно для заполнения
+        </div>
+      </div>
+
+      <div class="form-group m-3">
+        <label class="text-white" for="Email">Email</label>
+        <input pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" maxlength="40" [class.invalid]="Email.invalid && Email.touched" required class="form-control-lg w-100" id="Email" type="email" placeholder="Email" name="Email" #Email="ngModel" ngModel />
+        <div [hidden]="Email.valid || Email.untouched " class="alert alert-danger">
+          не корректные данные.
+        </div>
+      </div>
+
+      <div class="form-group m-3 ">
+        <label class="text-white" for="password">Пароль</label>
+        <input maxlength="40" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{6,15}$" required [class.invalid]="Password.invalid &&Password.touched" class="form-control-lg w-100" id="Password" placeholder="Пароль" name="Password" #Password="ngModel" ngModel type="password" />
+        <div [hidden]="Password.valid || Password.untouched " class="alert alert-danger">
+          <p>
+            не корректные данные.<br />
+            Пароль должен содержать минимум:<br />
+            1 Большую букву<br />
+            1 маленькую букву<br />
+            1 цифру<br />
+            1 спец символ<br />
+            быть не короче 6 символов<br />
+          </p>
+          
+        </div>
+      </div>
+
+      <div class="form-group m-3 ">
+        <label class="text-white" for="password">Пароль</label>
+        <input maxlength="40" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{6,15}$" [class.invalid]="ConfirmPassword.invalid&&ConfirmPassword.touched" required class="form-control-lg w-100" id="ConfirmPassword" placeholder="Повторите пароль" #ConfirmPassword="ngModel" name="ConfirmPassword" ngModel type="password" />
+        <div [hidden]="ConfirmPassword.valid || ConfirmPassword.untouched " class="alert alert-danger">
+          не корректные данные.
+        </div>
+        <div *ngIf="IsPassvordConfirmed==false" class="alert alert-danger">
+          <p>Пароли не совпадают</p>
+        </div>
+        <!--<div *ngIf="IsPassvordConfirmed==false" [hidden]="ConfirmPassword.untouched" class="alert alert-danger">
+    Пароли не совпадают
+  </div>-->
+      </div>
+
+      <button class="btn bg-warning  m-3" type="submit">submit</button>
+    </form>
+</div>
+  <div class="col-md-4">
+  </div>
+</div>
+
+
+
+
+
+

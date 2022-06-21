@@ -1,10 +1,12 @@
 export class Test {
-  Id: number = 0;
-  LogoImagPath: string = "";
+  Id: number;
+  LogoImagPath: string;
   Title: string = "";
   ActiveHelps: boolean = false;
-  AvtorId: string = "";
-  QuestCount:number=0;
+  AvtorId: string;
+  QuestCount: number = 0;
+  CreatedDate: string;
+  Description: string;
 }
 
 //public int Id { get; set; }

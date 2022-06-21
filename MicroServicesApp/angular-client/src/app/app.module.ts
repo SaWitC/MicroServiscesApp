@@ -15,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from "./services/auth.service";
 import { TestFormComponent } from "./components/test-form/test-form.component"
 import {AuthGuard} from "./Guards/auth-guard-service";
-import { DetailsComponent } from './components/testcomponents/details/details.component'
+import { DetailsComponent } from './components/testcomponents/details/details.component';
+import { RegisterComponent } from './components/register/register.component'
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -29,7 +30,8 @@ export function tokenGetter() {
     MyTestsComponent,
     LoginComponent,
     TestFormComponent,
-    DetailsComponent
+    DetailsComponent,
+    RegisterComponent
     //HttpClientModule,
 
   ],

@@ -10,10 +10,17 @@ questCount:number=0;-->
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
       <h1>Title ={{testService.formData.Title}}</h1>
+
       <div class="form-group">
         <label class="text-white">Название</label>
         <input type="text" class="form-control form-control-lg" placeholder="Title" name="Title" #Description="ngModel" [(ngModel)]="testService.formData.Title"
                required maxlength="100" />
+      </div>
+
+      <div class="form-group">
+        <label class="text-white">Название</label>
+        <textarea type="text" class="form-control form-control-lg" placeholder="Description" name="Description" #Description="ngModel" [(ngModel)]="testService.formData.Description"
+               required maxlength="2000"> </textarea>  
       </div>
 
       <div class="form-group">

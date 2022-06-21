@@ -42,6 +42,24 @@ export class AuthService {
     this.invalidLogin = true;
   }
 
+  Register(form: NgForm) {
+    const creadentialsreg = {
+      Email: form.value.Email,
+      userName: form.value.UserName,
+      password: form.value.Password
+    }
+    console.log(creadentialsreg)
+
+    return this.http.post("http://localhost:46574/api/Auth/api/Auth/Register", creadentialsreg).subscribe(
+      response => {
+        console.log("ok");
+      },
+      err => {
+        this.invalidLogin = true;
+        console.log("error");
+      });
+  }
+
 
   login(form: NgForm) {
     const credentails = {
