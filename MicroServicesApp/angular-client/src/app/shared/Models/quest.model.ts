@@ -1,12 +1,14 @@
+import { LeftAnswer } from "./left-answer.model";
+
 export class Quest {
 
-  id: number = 0;
-  imgPath: string = "";
-  questText: string = "";
-  helpText: boolean = false;
-  testId: number = 0;
+  Id: number = 0;
+  ImgPath: string = "";
+  QuestText: string = "";
+  HelpText: string;
+  TestId: number = 0;
   Right_answer: string;
-  //LeftAnswer[]
+  LeftAnswers: string[]
 }
 
 

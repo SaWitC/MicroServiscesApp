@@ -16,25 +16,7 @@ export class TestServiceService {
 
 
   createTest(form: NgForm) {
-
-
-    //var myJSONString = JSON.stringify(this.formData.Description);
-    //var myEscapedJSONString = this.formData.Description.replace(/\\n/g, "\\n")
-    //  .replace(/\\'/g, "\\'")
-    //  .replace(/\\"/g, '\\"')
-    //  .replace(/\\&/g, "\\&")
-    //  .replace(/\\r/g, "\\r")
-    //  .replace(/\\t/g, "\\t")
-    //  .replace(/\\b/g, "\\b")
-    //  .replace(/\\f/g, "\\f");
-
-
-
-    console.log(this.formData)
-
-    var x = this.formData.Description.split('\n');
     console.log("=======================")
-    console.log(x);
     console.log(this.formData);
     return this.http.post("http://localhost:9410/api/Tests/api/Tests/CreateTest",this.formData);
   }

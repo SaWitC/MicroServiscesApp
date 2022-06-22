@@ -1,12 +1,6 @@
 <!--#questForm="ngForm" *ngIf="test.formData.Id>0;else NoData"-->
 
-<!--<form>
-  <p>Выбран тест <b>{{test.formData.Title}}</b></p>
-  <input class="form-control form-control-lg" placeholder="Условие" />
-  <input class="form-control form-control-lg" placeholder="Подсказка" />
 
-  <button>Добавить вопрос</button>
-</form>-->
 
 <div class="row">
   <div class="col-lg-5">
@@ -24,20 +18,26 @@
     <button class="w-100" (click)="NextPage()">next Page</button>
     <button class="w-100" (click)="FirstPage()">First</button>
   </div>
-  <div class="col-lg-7">
+  <div class="col-lg-7 row">
 
     <form #questForm="ngForm" *ngIf="testService.formData.Id>0;else NoData">
       <div class="card" style="width:100%;">
         <img class="card-img-top" src="{{testService.formData.LogoImagPath}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{testService.formData.Title}}</h5>
-          <p class="card-text">999999999 {{testService.formData.LogoImagPath}}</p>
-          <a href="#" class="btn btn-primary">{{testService.formData.Title}}</a>
+          <p class="card-text">{{testService.formData.Description}}</p>
+          <a class="btn bg-primary text-white" [routerLink]="['TestInfo',testService.formData.Id]">Подробнее</a>
         </div>
       </div>
     </form>
     <ng-template #NoData>
       <h1>Выберите тест(кликнув по нему) для просмотра информации</h1>
     </ng-template>
+
+    <div class="col-12">
+      <h1>component</h1>
+      <!--<app-quest-form></app-quest-form>-->
+    </div>
+
   </div>
 </div>

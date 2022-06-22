@@ -16,7 +16,10 @@ import { AuthService } from "./services/auth.service";
 import { TestFormComponent } from "./components/test-form/test-form.component"
 import {AuthGuard} from "./Guards/auth-guard-service";
 import { DetailsComponent } from './components/testcomponents/details/details.component';
-import { RegisterComponent } from './components/register/register.component'
+import { RegisterComponent } from './components/register/register.component';
+import { QuestFormComponent } from './components/questComponents/quest-form/quest-form.component'
+import { QuestService } from "./services/quest.service";
+import { InfoComponent } from './components/testcomponents/info/info.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -31,7 +34,9 @@ export function tokenGetter() {
     LoginComponent,
     TestFormComponent,
     DetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    QuestFormComponent,
+    InfoComponent
     //HttpClientModule,
 
   ],
@@ -51,7 +56,7 @@ export function tokenGetter() {
     }),
 
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, QuestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

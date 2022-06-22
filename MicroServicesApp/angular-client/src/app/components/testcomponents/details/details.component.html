@@ -1,21 +1,18 @@
 <div class="row">
+  <h1>Details</h1>
   <div class="col-lg-5">
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th>LogoImagePath</th>
           <th>Title</th>
           <th>ActiveHelps</th>
-          <th>AvtorId</th>
           <th>QuestCount</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let pd of test.list">
-          <td (click)="PutData(pd)"><label> {{pd.LogoImagPath}}</label></td>
           <td (click)="PutData(pd)"><label> {{pd.Title}}</label></td>
           <td (click)="PutData(pd)"> {{pd.ActiveHelps}}</td>
-          <td (click)="PutData(pd)"> {{pd.AvtorId}}</td>
           <td (click)="PutData(pd)"> {{pd.QuestCount}}</td>
         </tr>
       </tbody>
@@ -25,16 +22,17 @@
   </div>
 
   <div class="col-lg-7">
-    <!--<form #form="ngForm" (submit)="Update(form)">
-      <div class="form-group">
-        <label>Title</label>
-        <input type="text" class="form-control form-control-lg" placeholder="Title" name="Description" #Description="ngModel" [(ngModel)]="test.formData.Title"
-               required maxlength="100" />
-      </div>
-    </form>-->
 
     <form #questForm="ngForm" *ngIf="test.formData.Id>0;else NoData">
-      
+      <div class="card" style="width:100%;">
+        <img class="card-img-top" src="{{test.formData.LogoImagPath}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{test.formData.Title}}</h5>
+          <p class="card-text">{{test.formData.Description}}</p>
+          <!--<a class="btn bg-info text-white" [routerLink]="['TestInfo',test.formData.Id]" >Подробнее</a>-->
+          <!--<a href="#" class="btn btn-primary">Пройти {{test.formData.Title}}</a>-->
+        </div>
+      </div>
     </form>
     <ng-template #NoData>
       <h1>Выберите тест(кликнув по нему) для просмотра информации</h1>

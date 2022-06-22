@@ -16,6 +16,10 @@ questCount:number=0;-->
         <input type="text" class="form-control form-control-lg" placeholder="Title" name="Title" #Description="ngModel" [(ngModel)]="testService.formData.Title"
                required maxlength="100" />
       </div>
+      <div>
+        <label class="text-white">Тест с подсказками</label>
+        <input type="checkbox" name="ActiveHelps" id="ActiveHelps" [(ngModel)]="testService.formData.ActiveHelps" class="" />
+      </div>
 
       <div class="form-group">
         <label class="text-white">Название</label>

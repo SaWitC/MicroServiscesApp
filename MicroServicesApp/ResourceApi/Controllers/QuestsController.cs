@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using ResourceApi.Data;
 using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
+using ResourceApi.ViewModel;
 
 namespace ResourceApi.Controllers
 {
@@ -28,57 +29,33 @@ namespace ResourceApi.Controllers
         }
 
         // GET: api/Quests
-        [HttpGet("{Id}")]
-        public async Task<ActionResult> GetQuests(int Id)
+        [HttpGet("{TestId}")]
+        public async Task<ActionResult> GetQuests(int TestId)
         {
-            return Ok(JsonSerializer.Serialize(await _questRepository.GetQuestsByTestId(Id)));
+            return Ok(JsonSerializer.Serialize(await _questRepository.GetQuestsByTestId(TestId)));
         }
 
-        // PUT: api/Quests/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutQuest(int id, Quest quest)
-        //{
-        //    if (id != quest.Id)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(quest).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!QuestExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
-
-        // POST: api/Quests
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Quest>> Create(Quest quest,int? id)
+        [HttpPost("{TestId}")]
+        public async Task<ActionResult<Quest>> Create(CreateQuestVM Quest,int? TestId)
         {
-            if (id != null)
+            if (TestId != null)
             {
-                var test =await _testRepository.GetTestByIdAsync((int)id);
+                var test =await _testRepository.GetTestByIdAsync((int)TestId);
                 if (test != null)
                 {
-                    quest.TestId = test.Id;
-                    await _questRepository.CreateQuestAsync(quest);
+                    var questModels = new Quest();
+                    questModels.ImgPath = Quest.ImgPath;
+                    //questModels.LeftAnswers = Quest.ImgPath;
+                    questModels.QuestText = Quest.QuestText;
+                    questModels.Right_answer = Quest.Right_answer;
+                    questModels.HelpText = Quest.HelpText;
+                    //questModels.Right_answer = Quest.Right_answer;
+
+
+                    questModels.TestId = test.Id;
+                    await _questRepository.CreateQuestAsync(questModels);
                     //await _context.SaveChangesAsync();
-                    return Ok(quest);
+                    return Ok();
                 }
             }
             //return CreatedAtAction("GetQuest", new { id = quest.Id }, quest);
@@ -99,10 +76,5 @@ namespace ResourceApi.Controllers
 
             return NoContent();
         }
-
-        //private bool QuestExists(int id)
-        //{
-        //    return _context.Quests.Any(e => e.Id == id);
-        //}
     }
 }

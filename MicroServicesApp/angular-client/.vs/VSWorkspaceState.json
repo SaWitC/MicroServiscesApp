@@ -4,13 +4,14 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\login",
+    "\\src\\app\\components\\questComponents",
+    "\\src\\app\\components\\questComponents\\quest-form",
     "\\src\\app\\components\\register",
-    "\\src\\app\\components\\test-form",
-    "\\src\\app\\services",
+    "\\src\\app\\components\\testcomponents",
+    "\\src\\app\\components\\testcomponents\\info",
     "\\src\\app\\shared",
     "\\src\\app\\shared\\Models"
   ],
-  "SelectedNode": "\\src\\app\\components\\test-form\\test-form.component.html",
+  "SelectedNode": "\\src\\app\\services\\quest.service.ts",
   "PreviewInSolutionExplorer": false
 }

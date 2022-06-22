@@ -1,0 +1,83 @@
+<p>info works! {{Id}}</p>
+
+<div class="row bg-dark">
+  <div class="col-md-6">
+    <img class="" style="width:100%; height:auto" src="{{TestService.formData.LogoImagPath}}" alt="Card image cap">
+  </div>
+  <div class="col-md-6">
+    <h5 class="card-title text-white">{{TestService.formData.Title}}</h5>
+    <p class="card-text text-white"> {{TestService.formData.Description}}</p>
+  </div>
+  <div class="col-12 bg-dark">
+    <table class="w-100">
+      <thead class="thead-dark">
+        <tr>
+          <th class="text-white"><b>Дата создания</b>: {{TestService.formData.CreatedDate}}</th>
+          <th class="text-white"><b>Количество вопросов</b>: {{TestService.formData.QuestCount}}</th>
+          <th class="text-white"><b>Категория</b>: </th>
+          <th class="text-white"><b>Сложность</b>: </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+  <button class="bg-warning btn form-control mb-4">Пройти</button>
+  <div class="col-md-8">
+    <h1 class="text-white">Вопросы</h1>
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let pd of QuestService.Quests">
+          <div class="col-12 row m-2" style="background-color:#2b2a2d;">
+            <div class="col-4">
+              <img class="w-100" src="{{pd.ImgPath}}">
+            </div>
+            <div class="col-8 card-body">
+              <h6 class="card-title text-white">{{pd.QuestText}}</h6>
+              <h6 class="card-title text-white">{{pd.HelpText}}</h6>
+              <h6 class="card-title text-white">{{pd.Right_answer}}</h6>
+              <h6 class="card-title text-white">{{pd.QuestText}}</h6>
+            </div>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-md-4">
+    <app-quest-form></app-quest-form>
+  </div>
+
+</div>
+
+<h1>quests</h1>
+<div class="row">
+  <div class="col-md-8">
+
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
+
+
+<!--export class Test {
+  Id: number;
+  LogoImagPath: string;
+  Title: string = "";
+  ActiveHelps: boolean = false;
+  AvtorId: string;
+  QuestCount: number = 0;
+  CreatedDate: string;
+  Description: string;
+}-->
+
+<!--export class Quest {
+
+  id: number = 0;
+  imgPath: string = "";
+  questText: string = "";
+  helpText: string;
+  testId: number = 0;
+  right_answer: string;
+  leftAnswer: LeftAnswer[]
+}-->
