@@ -50,11 +50,11 @@ export class AuthService {
 
     return this.http.post("http://localhost:46574/api/Auth/api/Auth/Register", creadentialsreg).subscribe(
       response => {
-        console.log("ok");
+        console.log("Done");
       },
       err => {
         this.invalidLogin = true;
-        console.log("error");
+        console.log(err);
       });
   }
 
@@ -67,16 +67,15 @@ export class AuthService {
 
     this.http.post("http://localhost:46574/api/Auth/api/Auth/Login", credentails).subscribe(
       response => {
-        //const token = (<any>response).token;
         const token: string = (<any>response).token;
         localStorage.setItem("jwt", token);
         this.invalidLogin = false;
         this.router.navigate(["/"]);
-        console.log("ok");
+        console.log("Done");
       },
       err => {
         this.invalidLogin = true;
-        console.log("error");
+        console.log(err);
       });
   }
 }

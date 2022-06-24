@@ -108,7 +108,38 @@ namespace ResourceApi.Data.Repository
         { 
             return await _context.testModels.Where(o => o.AvtorId == Id).Skip(page*size).Take(size).ToListAsync();
         }
-        
+
+        public async Task<bool> TestCountAdd(TestModel model)
+        {
+            try
+            {
+                model.QuestsCount++;
+                _context.testModels.Update(model);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> TestCountTake_Away(TestModel model)
+        {
+            try
+            {
+                model.QuestsCount--;
+                _context.testModels.Update(model);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
 
     }
 }

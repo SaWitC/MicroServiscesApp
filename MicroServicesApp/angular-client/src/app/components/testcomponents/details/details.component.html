@@ -29,8 +29,9 @@
         <div class="card-body">
           <h5 class="card-title">{{test.formData.Title}}</h5>
           <p class="card-text">{{test.formData.Description}}</p>
-          <!--<a class="btn bg-info text-white" [routerLink]="['TestInfo',test.formData.Id]" >Подробнее</a>-->
-          <!--<a href="#" class="btn btn-primary">Пройти {{test.formData.Title}}</a>-->
+          <p>Дата создания {{test.formData.CreatedDate}}</p>
+          <p> Количество вопросов {{test.formData.QuestCount}}</p>
+
         </div>
       </div>
     </form>
@@ -38,16 +39,18 @@
       <h1>Выберите тест(кликнув по нему) для просмотра информации</h1>
     </ng-template>
   </div>
- 
-
 </div>
 
 
 
 
-<!--id: number = 0;
-logoImagePath: string = "";
-title: string = "";
-activeHelps: boolean = false;
-avtorId: string = "";
-questCount:number=0;-->
+<!--export class Test {
+  Id: number;
+  LogoImagPath: string;
+  Title: string = "";
+  ActiveHelps: boolean = false;
+  AvtorId: string;
+  QuestCount: number = 0;
+  CreatedDate: string;
+  Description: string;
+}-->

@@ -1,9 +1,12 @@
-<h1 class="text-white">Новый вопрос</h1>
+<h1 *ngIf="QuestService.FormData.Id<=0;else UpdateTitle" class="text-white">Новый вопрос</h1>
+<ng-template #UpdateTitle>
+  <h1 class="text-white">Обновление вопроса </h1>
+</ng-template>
 
-<form *ngIf="TestService.formData.Id!=null" novalidate #form="ngForm" (submit)="Submit(form,TestService.formData.Id)">
+<form class="mt-0" *ngIf="TestService.formData.Id!=null" novalidate #form="ngForm" (submit)="Submit(form,TestService.formData.Id)">
   <div *ngIf="TestService.formData.ActiveHelps">
     <label>Подсказка</label>
-    <input type="text" rquired maxlength="200" #HelpText [(ngModel)]="QuestService.FormData.HelpText" class="form-control" placeholder="Подсказка" />
+    <input type="text" rquired maxlength="200" name="HelpText" #HelpText="ngModel" [(ngModel)]="QuestService.FormData.HelpText" class="form-control" placeholder="Подсказка" />
   </div>
 
   <div class="form-group">
@@ -13,35 +16,47 @@
   </div>
 
   <div class="form-group">
-    <label class="text-white">Image</label>
+    <label class="text-white">Картинка</label>
     <input type="text" class="form-control form-control-lg" placeholder="ImgPath" name="ImgPath" #ImgPath="ngModel" [(ngModel)]="QuestService.FormData.ImgPath"
            required maxlength="100" />
   </div>
 
   <div class="form-group">
-    <label class="text-white">Answer</label>
+    <label class="text-white">Правильный ответ</label>
     <input type="text" class="form-control form-control-lg" placeholder="Right_answer" name="Right_answer" #Right_answer="ngModel" [(ngModel)]="QuestService.FormData.Right_answer"
            required maxlength="100" />
   </div>
 
   <div class="form-group">
-    <label class="text-white">Answer</label>
+    <label class="text-white">Не правильный ответ 1</label>
     <input type="text" class="form-control form-control-lg" id="Left_answer1" #Left_answer1="ngModel" placeholder="Left_answer1" ngModel name="Left_answer1"
            required maxlength="100" />
   </div>
 
   <div class="form-group">
-    <label class="text-white">Answer</label>
+    <label class="text-white">Не правильный ответ 2</label>
     <input type="text" class="form-control form-control-lg" id="Left_answer2" #Left_answer2="ngModel" placeholder="Left_answer2" ngModel name="Left_answer2"
            required maxlength="100" />
   </div>
 
   <div class="form-group">
-    <label class="text-white">Answer</label>
+    <label class="text-white">Не правильный ответ 3</label>
     <input type="text" class="form-control form-control-lg" id="Left_answer3" #Left_answer3="ngModel" placeholder="Left_answer3" ngModel name="Left_answer3"
            required maxlength="100" />
   </div>
 
-  <button type="submit" class="form-control bg-warning btn">Добавить вопрос</button>
+  <button *ngIf="QuestService.FormData.Id<=0;else Update" type="submit" class="form-control bg-warning btn">Добавить вопрос</button>
+
+  <ng-template #Update>
+    <div class="row m-0">
+      <div class="col-8 m-0">
+        <button type="submit" class="form-control bg-warning btn">Обновить</button>
+      </div>
+      <div class="col-4 m-0">
+        <button type="button" (click)="ClearForm()" class="form-control bg-danger btn">очистить</button>
+      </div>
+    </div>
+  </ng-template>
+
 </form>
 

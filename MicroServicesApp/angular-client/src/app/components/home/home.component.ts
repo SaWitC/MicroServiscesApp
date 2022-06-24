@@ -18,10 +18,34 @@ export class HomeComponent implements OnInit {
     public testService: TestServiceService,
     private auth: AuthService) { }
 
+  page: number = 0;
 
   ngOnInit(): void {
+    this.testService.GetTestes(this.page)
     this.invalidLogin = !this.auth.isAuhtenticated();
   }
+
+  NextPage() {
+    if (this.testService.IsNullResponse == false)
+      this.page++;
+    this.testService.GetTestes(this.page)
+    this.testService.refreshList();
+  }
+
+  PrewPage() {
+    if (this.page >= 1) {
+      this.page--;
+    }
+    this.testService.GetTestes(this.page)
+    this.testService.refreshList();
+  }
+
+  FirstPage() {
+    this.page = 0;
+    this.testService.GetTestes(this.page)
+    this.testService.refreshList();
+  }
+
 
   //isAuhtenticated():boolean {
   //  var token: string = "";

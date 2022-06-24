@@ -14,6 +14,8 @@ export class TestServiceService {
   list: Test[];
   listByAvtor: Test[];
 
+  IsNullResponse: boolean;
+
 
   createTest(form: NgForm) {
     console.log("=======================")
@@ -29,6 +31,13 @@ export class TestServiceService {
 
         //console.log(res as Test[]);
         this.list = res as Test[];
+
+        if (res as Test[] == []) {
+          this.IsNullResponse = true;
+        }
+        else {
+          this.IsNullResponse = false;
+        }
       });
   }
 

@@ -12,6 +12,17 @@ export class Quest {
 }
 
 
+export class Quest2 {
+
+  Id: number = 0;
+  ImgPath: string = "";
+  QuestText: string = "";
+  HelpText: string;
+  TestId: number = 0;
+  Right_answer: string;
+  LeftAnswers: LeftAnswer[]
+}
+
 //public int Id { get; set; }  
 //public string ImgPath { get; set; }
 //[MaxLength(1000), MinLength(3)]

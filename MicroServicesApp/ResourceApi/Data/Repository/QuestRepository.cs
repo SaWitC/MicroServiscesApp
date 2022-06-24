@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
 using ResourceApi.ViewModel;
@@ -18,7 +19,7 @@ namespace ResourceApi.Data.Repository
             _context = context;
 
         }
-        public async Task<bool> CreateQuestAsync(int TestId, Quest quest)
+        public async Task<EntityEntry<Quest>> CreateQuestAsync(int TestId, Quest quest)
         {
             if (TestId > 0)
             {
@@ -27,47 +28,41 @@ namespace ResourceApi.Data.Repository
                 {
                     quest.test = test;
                     quest.TestId = test.Id;
-                    await _context.Quests.AddAsync(quest);
+                    var entityEntry =await _context.Quests.AddAsync(quest);
                     await _context.SaveChangesAsync();
-                    return true;
+                    return entityEntry;
                 }
             }
-            return false;
+            return null;
         }
-        public async Task<bool> CreateQuestAsync(Quest quest)
+        public async Task<EntityEntry<Quest>> CreateQuestAsync(Quest quest)
         {
             try
             {
-                await _context.Quests.AddAsync(quest);
+                var entity =await _context.Quests.AddAsync(quest);
                 await _context.SaveChangesAsync();
-                return true;
+                return entity;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return false;
+                return null;
             }
         }
-        public async Task<bool> EditQuestAsync(UpdateViewModel model)
+        public async Task<bool> EditQuestAsync(CreateQuestVM model, Quest Oldquest)
         {
-            if (model.TestId > 0)
-            {
-                var test = _context.testModels.FirstOrDefaultAsync(o => o.Id == model.TestId);
-                if (test != null)
-                {
-                    var quest = await _context.Quests.FirstOrDefaultAsync(o => o.Id == model.Id);
-                    if (quest != null)
-                    {
-                        quest.QuestText = model.QuestText;
-                        quest.HelpText = model.HelpText;
-                        quest.ImgPath = model.ImgPath;
-                        _context.Quests.Update(quest);
-                        await _context.SaveChangesAsync();
-                        return true;
-                    }
-                }
-            }
 
+            if (Oldquest.TestId > 0 &&Oldquest.Id>0)
+            {
+                Oldquest.ImgPath = model.ImgPath;
+                Oldquest.QuestText = model.QuestText;
+                Oldquest.Right_answer = model.Right_answer;
+                Oldquest.HelpText = model.HelpText;
+
+                _context.Quests.Update(Oldquest);
+                await _context.SaveChangesAsync();
+                return true;
+            }
             return false;
         }
 
@@ -109,7 +104,7 @@ namespace ResourceApi.Data.Repository
 
         public async Task<IEnumerable<Quest>> GetQuestsByTestId(int Id)
         {
-            return await _context.Quests.Where(o => o.TestId == Id).ToListAsync();
+            return await _context.Quests.Where(o => o.TestId == Id).Include(o=>o.LeftAnswers).ToListAsync();
         }
         public async Task<Quest> GetQuestByid(int id)
         {

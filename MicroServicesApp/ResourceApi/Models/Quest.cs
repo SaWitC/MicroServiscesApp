@@ -21,5 +21,7 @@ namespace ResourceApi.Models
         [ForeignKey("test")]
         public int TestId { get; set; }    
         public TestModel test { get; set; }
+
+        //public bool IsUsed { get; set; }
     }
 }

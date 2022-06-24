@@ -22,25 +22,41 @@ export class QuestFormComponent implements OnInit {
   }
 
   Submit(form: NgForm, TestId: number) {
-
+    
     var LeftAnsvers: string[];
     LeftAnsvers = [];
     console.log(form.value.Left_answer1)
-    LeftAnsvers.push(form.value.Left_answer1);
-    LeftAnsvers.push(form.value.Left_answer2);
-    LeftAnsvers.push(form.value.Left_answer3);
-    console.log(LeftAnsvers);
-   // this.QuestService.FormData.LeftAnswer = LeftAnsvers;
+    if (form.value.Left_answer1!="") 
+      LeftAnsvers.push(form.value.Left_answer1);
+    if (form.value.Left_answer2 != "")
+      LeftAnsvers.push(form.value.Left_answer2);
+    if (form.value.Left_answer3 != "")
+      LeftAnsvers.push(form.value.Left_answer3);
 
+    if (this.QuestService.FormData.Id <= 0) {
+      this.QuestService.Create(TestId, LeftAnsvers).subscribe(res => {
+        console.log(res)
+        this.QuestService.GetQuestsByTestId(TestId);
+        form.reset();
+      },
+        err => {
+          console.log(err);
+        })
+    }
+    else {
+      this.QuestService.Update(this.QuestService.FormData.Id, LeftAnsvers)?.subscribe(res => {
+        this.QuestService.GetQuestsByTestId(TestId);
+        form.reset();
+      },
+        err => {
+          console.log(err);
+        })
+    }
 
-    this.QuestService.Create(TestId, LeftAnsvers).subscribe(res => {
-      console.log(res)
-      this.QuestService.GetQuestsByTestId(TestId);
-      form.reset();
-    },
-      err => {
-        console.log(err);
-      })
+  }
+
+  ClearForm() {
+    this.QuestService.FormData = new Quest();
   }
 
 

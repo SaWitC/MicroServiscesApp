@@ -31,11 +31,17 @@
             <div class="col-4">
               <img class="w-100" src="{{pd.ImgPath}}">
             </div>
-            <div class="col-8 card-body">
-              <h6 class="card-title text-white">{{pd.QuestText}}</h6>
-              <h6 class="card-title text-white">{{pd.HelpText}}</h6>
-              <h6 class="card-title text-white">{{pd.Right_answer}}</h6>
-              <h6 class="card-title text-white">{{pd.QuestText}}</h6>
+            <div class="col-6 card-body">
+              <h6 class="card-title text-white" (click)="PutData(pd)">Условие : {{pd.QuestText}}</h6>
+              <h6 class="card-title text-white">Подсказка : {{pd.HelpText}}</h6>
+              <h6 class="card-title text-white">Верный ответ : {{pd.Right_answer}}</h6>
+              <h6 class="card-title text-white">Не верные ответы : </h6>
+              <div *ngFor="let pd2 of pd.LeftAnswers">
+                <code>{{pd2.Title}}</code>
+              </div>
+            </div>
+            <div col-2>
+              <button (click)="RemoveQuest(pd.Id)">Remove</button>
             </div>
           </div>
         </tr>

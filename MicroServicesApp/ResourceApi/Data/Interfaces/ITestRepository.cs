@@ -14,6 +14,10 @@ namespace ResourceApi.Data.Interfaces
         Task<bool> RemoveAsync(int Id);
         Task<IEnumerable<TestModel>> GetTestsByAvtorId(string Id,int size, int page = 0);
 
+        public Task<bool> TestCountAdd(TestModel model);
+        public Task<bool> TestCountTake_Away(TestModel model);
+
+
 
     }
 }

@@ -11,6 +11,7 @@ using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
 using ResourceApi.ViewModel;
 
+
 namespace ResourceApi.Controllers
 {
     [Route("api/[controller]")]
@@ -19,11 +20,14 @@ namespace ResourceApi.Controllers
     {
         private readonly IQuestRepository _questRepository;
         private readonly ITestRepository _testRepository;
+        private readonly ILeftAnswerRepository _leftAnswerRepository;
 
 
         public QuestsController(IQuestRepository questRepository,
-            ITestRepository testRepository)
+            ITestRepository testRepository,
+            ILeftAnswerRepository leftAnswerRepository)
         {
+            _leftAnswerRepository = leftAnswerRepository;
             _questRepository = questRepository;
             _testRepository = testRepository;
         }
@@ -45,17 +49,27 @@ namespace ResourceApi.Controllers
                 {
                     var questModels = new Quest();
                     questModels.ImgPath = Quest.ImgPath;
-                    //questModels.LeftAnswers = Quest.ImgPath;
                     questModels.QuestText = Quest.QuestText;
                     questModels.Right_answer = Quest.Right_answer;
                     questModels.HelpText = Quest.HelpText;
-                    //questModels.Right_answer = Quest.Right_answer;
 
 
                     questModels.TestId = test.Id;
-                    await _questRepository.CreateQuestAsync(questModels);
+                    var entity=await _questRepository.CreateQuestAsync(questModels);
+                    if (entity != null)
+                    {
+                        var quest = await _questRepository.GetQuestByid(entity.Entity.Id);
+                        if (quest != null)
+                        {
+                            await _testRepository.TestCountAdd(test);
+                            var IsCreatedAnswer = await _leftAnswerRepository.CreateAsync(Quest.LeftAnswers,quest.Id);
+                            
+                            if (IsCreatedAnswer)
+                                return Ok();
+                        }
+                    }
                     //await _context.SaveChangesAsync();
-                    return Ok();
+                    //return ba();
                 }
             }
             //return CreatedAtAction("GetQuest", new { id = quest.Id }, quest);
@@ -75,6 +89,32 @@ namespace ResourceApi.Controllers
             await _questRepository.RemoveQuestAsync(quest);
 
             return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> Update(CreateQuestVM Quest,int id)
+        {
+            if (ModelState.IsValid)
+            {
+                var quest = await _questRepository.GetQuestByid(id);
+                if (quest != null)
+                {
+                   var result= await _questRepository.EditQuestAsync(Quest,quest);
+                    if (result) {
+                        var Answers= await _leftAnswerRepository.GetLeftAnswersByQuestIdAsync(quest.Id);
+
+                        bool operateResoult;
+                        if (Answers.Count > 0)
+                            operateResoult = await _leftAnswerRepository.UpdateRangeAsync(Answers, Quest.LeftAnswers);
+                        else
+                            operateResoult = await _leftAnswerRepository.CreateAsync(Quest.LeftAnswers, quest.Id);
+                        if (operateResoult)
+                            return Ok();
+                    }
+                }
+               
+            }
+            return BadRequest();
         }
     }
 }

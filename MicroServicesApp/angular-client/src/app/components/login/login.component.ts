@@ -17,9 +17,10 @@ export class LoginComponent {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private auth: AuthService) { }
+    public auth: AuthService) { }
 
   ngOnInit(): void {
+    this.auth.invalidLogin = false;
   }
 
   

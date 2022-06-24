@@ -33,6 +33,7 @@ namespace ResourceApi
         public void ConfigureServices(IServiceCollection services)
         {
             var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+            services.AddScoped<ILeftAnswerRepository, LeftAnswerRepository>();
             services.AddScoped<IQuestRepository,QuestRepository>();
             services.AddScoped<ITestRepository, TestsRepository>();
             services.AddDbContext<AppDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
