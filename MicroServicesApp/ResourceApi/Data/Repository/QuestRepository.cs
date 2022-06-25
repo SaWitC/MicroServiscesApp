@@ -110,6 +110,12 @@ namespace ResourceApi.Data.Repository
         {
             return await _context.Quests.FirstOrDefaultAsync(o => o.Id == id);
         }
+        public async Task<IEnumerable<Quest>> GetFullQuestsForPassingAsync(int TestId)
+        {
+            var result= await _context.Quests.Where(o => o.TestId == TestId).Include(o => o.LeftAnswers).ToListAsync();
+            return result;
+        }
+
 
     }
 }

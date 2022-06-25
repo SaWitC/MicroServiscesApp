@@ -17,6 +17,8 @@ namespace ResourceApi.Data.Interfaces
         public Task<bool> TestCountAdd(TestModel model);
         public Task<bool> TestCountTake_Away(TestModel model);
 
+        public Task<TestModel> GetFullTestForPassingAsync(int TestId);
+
 
 
     }

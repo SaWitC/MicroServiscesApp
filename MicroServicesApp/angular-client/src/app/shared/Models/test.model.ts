@@ -1,3 +1,5 @@
+import { Quest2 } from "src/app/shared/Models/quest.model"
+
 export class Test {
   Id: number;
   LogoImagPath: string;
@@ -7,6 +9,7 @@ export class Test {
   QuestCount: number = 0;
   CreatedDate: string;
   Description: string;
+  Quests: Quest2[];
 }
 
 //public int Id { get; set; }

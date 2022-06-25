@@ -1,0 +1,34 @@
+<div class="row">
+
+  <div *ngIf="TestPassingServiceService.questCompleted==false;else complete" class="col-12 row m-2" style="background-color:#2b2a2d;">
+    <div class="col-4">
+      <img class="w-100" src="{{TestPassingServiceService.CurrentQuest.ImgPath}}">
+    </div>
+    <div class="col-6 card-body">
+      <h6 class="card-title text-white">Условие : {{TestPassingServiceService.CurrentQuest.QuestText}}</h6>
+      <h6 class="card-title text-white">Подсказка : {{TestPassingServiceService.CurrentQuest.HelpText}}</h6>
+      <h6 class="card-title text-white">Верный ответ : {{TestPassingServiceService.CurrentQuest.Right_answer}}</h6>
+      <h6 class="card-title text-white">Не верные ответы : </h6>
+      <!--<div *ngFor="let pd2 of pd.LeftAnswers">
+        <code>{{TestPassingServiceService.CurrentQuest.LeftAnswers.Title}}</code>
+      </div>-->
+    </div>
+    <div col-2>
+      
+    </div>
+    <div class="col-12 row">
+      <h1 class="text-white">{{TestPassingServiceService.RightAnswerCount}}</h1>
+      <!--<button (click)="ToAnswer()">{{TestPassingServiceService.CurrentQuest.Right_answer}}</button>-->
+      <div class="col-3" *ngFor="let pd of TestPassingServiceService.Answers">
+        <button (click)="ToAnswer(pd)" class="bg-info w-100 text-white">{{pd}}</button>
+      </div>
+    </div>
+  </div>
+  <ng-template #complete>
+    <div class="row bg-dark">
+      <h1 class=" text-center text-white">Completed</h1>
+    </div>
+  </ng-template>
+
+</div>
+

@@ -5,12 +5,12 @@
     "\\src\\app",
     "\\src\\app\\components",
     "\\src\\app\\components\\questComponents",
+    "\\src\\app\\components\\questComponents\\quest-form",
     "\\src\\app\\components\\testcomponents",
-    "\\src\\app\\components\\testcomponents\\info",
+    "\\src\\app\\components\\testcomponents\\test-passing",
     "\\src\\app\\services",
-    "\\src\\app\\shared",
-    "\\src\\app\\shared\\Models"
+    "\\src\\app\\shared"
   ],
-  "SelectedNode": "\\src\\app\\components\\questComponents\\quest-form\\quest-form.component.html",
+  "SelectedNode": "\\src\\app\\components\\testcomponents\\test-passing\\test-passing.component.html",
   "PreviewInSolutionExplorer": false
 }

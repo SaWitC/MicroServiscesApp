@@ -18,6 +18,8 @@ namespace ResourceApi.Data.Interfaces
         Task<Quest> GetQuestByid(int id);
 
         Task<IEnumerable<Quest>> GetQuestsByTestId(int Id);
+        public Task<IEnumerable<Quest>> GetFullQuestsForPassingAsync(int TestId);
+
 
 
 

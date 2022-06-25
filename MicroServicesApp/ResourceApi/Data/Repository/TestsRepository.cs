@@ -138,6 +138,14 @@ namespace ResourceApi.Data.Repository
                 return false;
             }
         }
+        public async Task<TestModel> GetFullTestForPassingAsync(int TestId)
+        {
+            var result = await _context.testModels.FirstOrDefaultAsync(o => o.Id == TestId);
+            if(result!=null)
+                result.Quests = await _context.Quests.Where(o => o.TestId == TestId).Include(o => o.LeftAnswers).ToListAsync();
+            return result;
+        }
+
 
 
 

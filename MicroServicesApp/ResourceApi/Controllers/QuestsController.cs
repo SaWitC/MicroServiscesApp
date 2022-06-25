@@ -116,5 +116,11 @@ namespace ResourceApi.Controllers
             }
             return BadRequest();
         }
+
+        [HttpGet("[action]/{TestId}")]
+        public async Task<IActionResult> GetTestForPassing(int TestId)
+        {
+            return Ok(JsonSerializer.Serialize(await _questRepository.GetFullQuestsForPassingAsync(TestId)));
+        }
     }
 }

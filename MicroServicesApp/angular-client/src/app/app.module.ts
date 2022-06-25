@@ -20,6 +20,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { QuestFormComponent } from './components/questComponents/quest-form/quest-form.component'
 import { QuestService } from "./services/quest.service";
 import { InfoComponent } from './components/testcomponents/info/info.component';
+import { TestPassingComponent } from './components/testcomponents/test-passing/test-passing.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -36,7 +37,8 @@ export function tokenGetter() {
     DetailsComponent,
     RegisterComponent,
     QuestFormComponent,
-    InfoComponent
+    InfoComponent,
+    TestPassingComponent
     //HttpClientModule,
 
   ],

@@ -8,6 +8,8 @@ import { AuthGuard } from "./Guards/auth-guard-service";
 import { DetailsComponent } from "./components/testcomponents/details/details.component"
 import { RegisterComponent } from './components/register/register.component'
 import { InfoComponent } from './components/testcomponents/info/info.component'
+import { TestPassingComponent } from './components/testcomponents/test-passing/test-passing.component'
+
 
 
 
@@ -19,7 +21,8 @@ const routes: Routes = [
   { path: "CreateTest", component: TestFormComponent, canActivate: [AuthGuard] },
   { path: "Tests", component: DetailsComponent },
   { path: "Register", component: RegisterComponent },
-  { path: "MyTests/TestInfo/:Id", component: InfoComponent, data: { breadcrumbs: 'Profile info' } }
+  { path: "MyTests/TestInfo/:Id", component: InfoComponent, data: { breadcrumbs: 'Profile info' } },
+  { path: "TestPassing/:Id", component: TestPassingComponent, data: { breadcrumbs: 'Profile info' } }
 
 
 
