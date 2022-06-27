@@ -65,3 +65,6 @@ C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\IdentityApi\obj\Debug
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\IdentityApi\obj\Debug\net5.0\ref\IdentityApi.dll
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\IdentityApi\obj\Debug\net5.0\IdentityApi.pdb
 C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\IdentityApi\obj\Debug\net5.0\IdentityApi.genruntimeconfig.cache
+C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\IdentityApi\bin\Debug\net5.0\NLog.dll
+C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\IdentityApi\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\IdentityApi\bin\Debug\net5.0\NLog.Web.AspNetCore.dll

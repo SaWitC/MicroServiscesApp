@@ -2217,6 +2217,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
           "Microsoft.IdentityModel.Tokens": "6.19.0",
+          "NLog.Extensions.Logging": "5.0.1",
           "NLog.Web.AspNetCore": "5.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "System.IdentityModel.Tokens.Jwt": "6.19.0"

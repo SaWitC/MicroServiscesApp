@@ -31,6 +31,9 @@
     <label class="text-white">Не правильный ответ 1</label>
     <input type="text" class="form-control form-control-lg" id="Left_answer1" #Left_answer1="ngModel" placeholder="Left_answer1" ngModel name="Left_answer1"
            required maxlength="100" />
+    <div ngIf="InvalidLeftAnswers==true" class="alert alert-danger">
+      поле имя обязательно для заполнения
+    </div>
   </div>
 
   <div class="form-group">

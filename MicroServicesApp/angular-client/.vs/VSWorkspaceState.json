@@ -4,13 +4,12 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\questComponents",
+    "\\src\\app\\components\\login",
     "\\src\\app\\components\\questComponents\\quest-form",
-    "\\src\\app\\components\\testcomponents",
     "\\src\\app\\components\\testcomponents\\test-passing",
     "\\src\\app\\services",
     "\\src\\app\\shared"
   ],
-  "SelectedNode": "\\src\\app\\components\\testcomponents\\test-passing\\test-passing.component.html",
+  "SelectedNode": "\\src\\app\\components\\login\\login.component.ts",
   "PreviewInSolutionExplorer": false
 }

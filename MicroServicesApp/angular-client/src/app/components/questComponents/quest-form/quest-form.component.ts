@@ -21,6 +21,8 @@ export class QuestFormComponent implements OnInit {
 
   }
 
+  InvalidLeftAnswers: boolean = false;
+
   Submit(form: NgForm, TestId: number) {
     
     var LeftAnsvers: string[];
@@ -32,6 +34,11 @@ export class QuestFormComponent implements OnInit {
       LeftAnsvers.push(form.value.Left_answer2);
     if (form.value.Left_answer3 != "")
       LeftAnsvers.push(form.value.Left_answer3);
+    if (LeftAnsvers == []) {
+      this.InvalidLeftAnswers = true
+      return;
+    }
+    this.InvalidLeftAnswers = false;
 
     if (this.QuestService.FormData.Id <= 0) {
       this.QuestService.Create(TestId, LeftAnsvers).subscribe(res => {

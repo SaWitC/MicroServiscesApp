@@ -1,0 +1,583 @@
+2022-06-27 14:17:17.2904|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-06-27 14:17:17.3498|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-06-27 14:17:17.3498|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-30869792-1458-454f-9ab8-6e26e995c870.xml'. 
+2022-06-27 14:17:17.3498|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-6e80eba1-dbb5-464b-bb70-f5327041bead.xml'. 
+2022-06-27 14:17:17.3498|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-7fe47b8f-6cda-4994-97c8-a0c6c0358b19.xml'. 
+2022-06-27 14:17:17.3498|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-f27e53c6-fda9-4b18-a305-1e72ab71cdc6.xml'. 
+2022-06-27 14:17:17.3688|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {30869792-1458-454f-9ab8-6e26e995c870}. 
+2022-06-27 14:17:17.3688|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {6e80eba1-dbb5-464b-bb70-f5327041bead}. 
+2022-06-27 14:17:17.3688|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {7fe47b8f-6cda-4994-97c8-a0c6c0358b19}. 
+2022-06-27 14:17:17.3688|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f27e53c6-fda9-4b18-a305-1e72ab71cdc6}. 
+2022-06-27 14:17:17.3688|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {30869792-1458-454f-9ab8-6e26e995c870} with expiration date 2022-09-10 17:38:21Z as default key. 
+2022-06-27 14:17:17.4165|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:17:17.4165|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-06-27 14:17:17.4165|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:17:17.4165|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-06-27 14:17:17.4165|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-06-27 14:17:17.4165|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {30869792-1458-454f-9ab8-6e26e995c870} as the default key. 
+2022-06-27 14:17:17.4165|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {30869792-1458-454f-9ab8-6e26e995c870} was loaded during application startup. 
+2022-06-27 14:17:17.5990|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ResourceApi 
+2022-06-27 14:17:17.5993|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-06-27 14:17:17.6337|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-06-27 14:17:17.6337|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi 
+2022-06-27 14:17:17.6337|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-06-27 14:17:17.6560|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger - - 
+2022-06-27 14:17:17.6560|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-06-27 14:17:17.6560|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:18.1900|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/index.html - - 
+2022-06-27 14:17:18.1900|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:18.2045|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger - - - 301 - - 549.0769ms 
+2022-06-27 14:17:18.2865|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/index.html - - - 200 - text/html;charset=utf-8 97.8024ms 
+2022-06-27 14:17:18.3015|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - 
+2022-06-27 14:17:18.3015|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:18.3015|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - 
+2022-06-27 14:17:18.3015|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:18.3089|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - 
+2022-06-27 14:17:18.3089|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:18.3276|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:17:18.3276|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:17:18.3276|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:17:18.3692|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2022-06-27 14:17:18.3692|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2022-06-27 14:17:18.3692|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - - 200 142933 text/css 72.2345ms 
+2022-06-27 14:17:18.3692|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2022-06-27 14:17:18.3823|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 72.9290ms 
+2022-06-27 14:17:18.4062|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 104.2680ms 
+2022-06-27 14:17:19.9869|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - 
+2022-06-27 14:17:19.9869|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:19.9869|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-bundle.js.map does not match an existing file 
+2022-06-27 14:17:20.0087|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js.map' 
+2022-06-27 14:17:20.0087|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:17:20.0901|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:17:20.0901|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - - 404 - - 105.9033ms 
+2022-06-27 14:17:20.5006|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - 
+2022-06-27 14:17:20.5006|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:20.5006|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+2022-06-27 14:17:20.5006|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js.map' 
+2022-06-27 14:17:20.5006|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:17:20.5006|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:17:20.5006|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.1508ms 
+2022-06-27 14:17:20.5957|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - 
+2022-06-27 14:17:20.5957|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:20.7306|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/favicon-32x32.png - - 
+2022-06-27 14:17:20.7306|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:17:20.7306|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 134.9788ms 
+2022-06-27 14:17:20.7306|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:17:20.7306|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2022-06-27 14:17:20.7306|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/favicon-32x32.png - - - 200 628 image/png 1.3097ms 
+2022-06-27 14:19:04.1199|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-06-27 14:19:04.1752|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-06-27 14:19:04.1849|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-30869792-1458-454f-9ab8-6e26e995c870.xml'. 
+2022-06-27 14:19:04.1849|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-6e80eba1-dbb5-464b-bb70-f5327041bead.xml'. 
+2022-06-27 14:19:04.1849|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-7fe47b8f-6cda-4994-97c8-a0c6c0358b19.xml'. 
+2022-06-27 14:19:04.1849|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-f27e53c6-fda9-4b18-a305-1e72ab71cdc6.xml'. 
+2022-06-27 14:19:04.1849|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {30869792-1458-454f-9ab8-6e26e995c870}. 
+2022-06-27 14:19:04.1946|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {6e80eba1-dbb5-464b-bb70-f5327041bead}. 
+2022-06-27 14:19:04.1946|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {7fe47b8f-6cda-4994-97c8-a0c6c0358b19}. 
+2022-06-27 14:19:04.1946|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f27e53c6-fda9-4b18-a305-1e72ab71cdc6}. 
+2022-06-27 14:19:04.1946|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {30869792-1458-454f-9ab8-6e26e995c870} with expiration date 2022-09-10 17:38:21Z as default key. 
+2022-06-27 14:19:04.2358|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:19:04.2358|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-06-27 14:19:04.2358|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:19:04.2358|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-06-27 14:19:04.2414|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-06-27 14:19:04.2414|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {30869792-1458-454f-9ab8-6e26e995c870} as the default key. 
+2022-06-27 14:19:04.2414|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {30869792-1458-454f-9ab8-6e26e995c870} was loaded during application startup. 
+2022-06-27 14:19:04.3897|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ResourceApi 
+2022-06-27 14:19:04.3897|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-06-27 14:19:04.4121|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-06-27 14:19:04.4121|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi 
+2022-06-27 14:19:04.4121|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-06-27 14:19:04.4121|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger - - 
+2022-06-27 14:19:04.4121|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-06-27 14:19:04.4121|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:04.4643|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/index.html - - 
+2022-06-27 14:19:04.4643|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:04.4643|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger - - - 301 - - 48.4395ms 
+2022-06-27 14:19:04.5369|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/index.html - - - 200 - text/html;charset=utf-8 72.5226ms 
+2022-06-27 14:19:04.5369|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - 
+2022-06-27 14:19:04.5369|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:04.5369|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - 
+2022-06-27 14:19:04.5369|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:04.5369|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - 
+2022-06-27 14:19:04.5369|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:04.5603|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:19:04.5603|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:19:04.5603|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:19:04.6232|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2022-06-27 14:19:04.6232|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2022-06-27 14:19:04.6232|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2022-06-27 14:19:04.6232|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - - 200 142933 text/css 81.6763ms 
+2022-06-27 14:19:04.6328|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 87.4749ms 
+2022-06-27 14:19:04.6557|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 110.4549ms 
+2022-06-27 14:19:04.7888|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - 
+2022-06-27 14:19:04.7888|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:04.7888|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-bundle.js.map does not match an existing file 
+2022-06-27 14:19:04.8133|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js.map' 
+2022-06-27 14:19:04.8133|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:19:04.9113|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:19:04.9131|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - - 404 - - 124.3449ms 
+2022-06-27 14:19:05.0032|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - 
+2022-06-27 14:19:05.0032|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:05.0032|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+2022-06-27 14:19:05.0032|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js.map' 
+2022-06-27 14:19:05.0032|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:19:05.0032|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:19:05.0032|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.0396ms 
+2022-06-27 14:19:05.0587|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - 
+2022-06-27 14:19:05.0587|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:05.1405|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 81.6838ms 
+2022-06-27 14:19:39.8940|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:9410/api/Tests/GetTests/0 - - 
+2022-06-27 14:19:39.8994|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:39.8994|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|OPTIONS requests are not supported 
+2022-06-27 14:19:39.9199|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Tests/GetTests/0' 
+2022-06-27 14:19:39.9199|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint '405 HTTP Method Not Supported' 
+2022-06-27 14:19:39.9199|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:4200'. 
+2022-06-27 14:19:39.9199|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-06-27 14:19:39.9199|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request is a preflight request. 
+2022-06-27 14:19:39.9199|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:9410/api/Tests/GetTests/0 - - - 204 - - 33.4667ms 
+2022-06-27 14:19:39.9472|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/api/Tests/GetTests/0 - - 
+2022-06-27 14:19:39.9472|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:19:39.9472|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-06-27 14:19:39.9472|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Tests/GetTests/0' 
+2022-06-27 14:19:39.9472|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' with route pattern 'api/Tests/GetTests/{page}' is valid for the request path '/api/Tests/GetTests/0' 
+2022-06-27 14:19:39.9472|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' 
+2022-06-27 14:19:39.9472|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:4200'. 
+2022-06-27 14:19:39.9472|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-06-27 14:19:40.2686|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '6/24/2022 7:16:21 PM', Current time: '6/27/2022 11:19:40 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-06-27 14:19:40.2927|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '6/24/2022 7:16:21 PM', Current time: '6/27/2022 11:19:40 AM'. 
+2022-06-27 14:19:40.2927|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' 
+2022-06-27 14:19:40.2927|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-06-27 14:19:40.3177|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetTests", controller = "Tests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTests(System.String, Int32) on controller ResourceApi.Controllers.TestsController (ResourceApi). 
+2022-06-27 14:19:40.3177|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-06-27 14:19:40.3177|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-06-27 14:19:40.3177|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-06-27 14:19:40.3177|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-06-27 14:19:40.3177|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-06-27 14:19:40.3190|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ResourceApi.Controllers.TestsController (ResourceApi) 
+2022-06-27 14:19:40.3989|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ResourceApi.Controllers.TestsController (ResourceApi) 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'category' of type 'System.String' ... 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'category' of type 'System.String' using the name '' in request data ... 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name '' for binding parameter 'category' of type 'System.String'. 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'category' of type 'System.String'. 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'category' of type 'System.String'. 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'category' of type 'System.String' ... 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'category' of type 'System.String'. 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'page' of type 'System.Int32' ... 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'page' of type 'System.Int32' using the name 'page' in request data ... 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'page' of type 'System.Int32'. 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'page' of type 'System.Int32'. 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'page' of type 'System.Int32' ... 
+2022-06-27 14:19:40.4167|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'page' of type 'System.Int32'. 
+2022-06-27 14:19:40.4167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-06-27 14:19:40.4167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-06-27 14:19:40.4167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-06-27 14:19:40.4167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-06-27 14:19:40.4293|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ResourceApi.Controllers.TestsController.GetTests (ResourceApi) - Validation state: Valid 
+2022-06-27 14:19:40.4293|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ResourceApi.Controllers.TestsController.GetTests (ResourceApi) with arguments (, 0) 
+2022-06-27 14:19:40.8922|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-06-27 14:19:40.9474|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<TestModel>()
+    .Skip(__p_0)
+    .Take(__p_1)' 
+2022-06-27 14:19:41.0276|0|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-06-27 14:19:41.0276|0|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-06-27 14:19:41.0810|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<TestModel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TestModel.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TestModel.ActiveHelps (bool) Required, 1], [Property: TestModel.AvtorId (string), 2], [Property: TestModel.CreatedDate (DateTime) Required, 3], [Property: TestModel.Description (string) Required MaxLength(2000), 4], [Property: TestModel.LogoImagPath (string), 5], [Property: TestModel.QuestsCount (int) Required, 6], [Property: TestModel.Title (string) Required MaxLength(100), 7], }
+        SELECT t.Id, t.ActiveHelps, t.AvtorId, t.CreatedDate, t.Description, t.LogoImagPath, t.QuestsCount, t.Title
+        FROM testModels AS t
+        ORDER BY (SELECT 1)
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TestModel>, 
+    ResourceApi.Data.AppDbContext, 
+    False, 
+    False
+)' 
+2022-06-27 14:19:41.1105|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-06-27 14:19:41.1476|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (35ms). 
+2022-06-27 14:19:41.1476|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-06-27 14:19:41.3630|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-06-27 14:19:41.3697|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActiveHelps], [t].[AvtorId], [t].[CreatedDate], [t].[Description], [t].[LogoImagPath], [t].[QuestsCount], [t].[Title]
+FROM [testModels] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2022-06-27 14:19:41.4235|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (56ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActiveHelps], [t].[AvtorId], [t].[CreatedDate], [t].[Description], [t].[LogoImagPath], [t].[QuestsCount], [t].[Title]
+FROM [testModels] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2022-06-27 14:19:41.4514|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TestModel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-06-27 14:19:41.4778|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TestModel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-06-27 14:19:41.4778|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TestModel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-06-27 14:19:41.4778|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TestModel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-06-27 14:19:41.4778|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-06-27 14:19:41.4778|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-06-27 14:19:41.4905|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-06-27 14:19:41.4905|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ResourceApi.Controllers.TestsController.GetTests (ResourceApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1068.5974ms. 
+2022-06-27 14:19:41.4905|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-06-27 14:19:41.4905|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-06-27 14:19:41.4905|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-06-27 14:19:41.4905|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-06-27 14:19:41.4905|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-06-27 14:19:41.4905|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-06-27 14:19:41.4905|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-06-27 14:19:41.4905|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-06-27 14:19:41.4905|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-06-27 14:19:41.4905|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-06-27 14:19:41.4905|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-06-27 14:19:41.4905|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2022-06-27 14:19:41.4905|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.String'. 
+2022-06-27 14:19:41.5058|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-06-27 14:19:41.5058|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-06-27 14:19:41.5058|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-06-27 14:19:41.5058|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ResourceApi.Controllers.TestsController.GetTests (ResourceApi) in 1187.733ms 
+2022-06-27 14:19:41.5058|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' 
+2022-06-27 14:19:41.5058|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed. 
+2022-06-27 14:19:41.5058|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/api/Tests/GetTests/0 - - - 200 - text/plain;+charset=utf-8 1564.8417ms 
+2022-06-27 14:20:46.6896|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 
+2022-06-27 14:20:46.6896|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:20:46.6896|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-06-27 14:20:46.6941|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:20:46.6941|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' with route pattern 'api/Auth/api/Auth/Login' is valid for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:20:46.6941|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:20:46.6941|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:9410'. 
+2022-06-27 14:20:46.6941|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-06-27 14:20:46.6941|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:20:46.6941|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:20:46.7129|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(IdentityApi.ViewModels.Account.LoginViewModel) on controller IdentityApi.Controllers.AuthController (IdentityApi). 
+2022-06-27 14:20:46.7129|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-06-27 14:20:46.7129|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-06-27 14:20:46.7129|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-06-27 14:20:46.7129|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-06-27 14:20:46.7129|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-06-27 14:20:46.7129|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller IdentityApi.Controllers.AuthController (IdentityApi) 
+2022-06-27 14:20:46.7822|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action IdentityApi.Controllers.AuthController.Login (IdentityApi) in 69.0683ms 
+2022-06-27 14:20:46.8028|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:20:46.8723|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'IdentityApi.Data.Interfaces.IAccountRepository' while attempting to activate 'IdentityApi.Controllers.AuthController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method75(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-27 14:20:46.8840|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 - 500 - text/plain 194.5422ms 
+2022-06-27 14:21:47.5783|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-06-27 14:21:47.6425|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-06-27 14:21:47.6537|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-30869792-1458-454f-9ab8-6e26e995c870.xml'. 
+2022-06-27 14:21:47.6537|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-6e80eba1-dbb5-464b-bb70-f5327041bead.xml'. 
+2022-06-27 14:21:47.6537|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-7fe47b8f-6cda-4994-97c8-a0c6c0358b19.xml'. 
+2022-06-27 14:21:47.6537|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-f27e53c6-fda9-4b18-a305-1e72ab71cdc6.xml'. 
+2022-06-27 14:21:47.6537|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {30869792-1458-454f-9ab8-6e26e995c870}. 
+2022-06-27 14:21:47.6647|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {6e80eba1-dbb5-464b-bb70-f5327041bead}. 
+2022-06-27 14:21:47.6647|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {7fe47b8f-6cda-4994-97c8-a0c6c0358b19}. 
+2022-06-27 14:21:47.6647|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f27e53c6-fda9-4b18-a305-1e72ab71cdc6}. 
+2022-06-27 14:21:47.6647|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {30869792-1458-454f-9ab8-6e26e995c870} with expiration date 2022-09-10 17:38:21Z as default key. 
+2022-06-27 14:21:47.7095|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:21:47.7095|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-06-27 14:21:47.7095|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:21:47.7095|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-06-27 14:21:47.7095|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-06-27 14:21:47.7095|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {30869792-1458-454f-9ab8-6e26e995c870} as the default key. 
+2022-06-27 14:21:47.7095|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {30869792-1458-454f-9ab8-6e26e995c870} was loaded during application startup. 
+2022-06-27 14:21:47.8674|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ResourceApi 
+2022-06-27 14:21:47.8674|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-06-27 14:21:47.8898|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-06-27 14:21:47.8898|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi 
+2022-06-27 14:21:47.8898|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-06-27 14:21:47.9017|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger - - 
+2022-06-27 14:21:47.9017|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-06-27 14:21:47.9017|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:47.9468|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/index.html - - 
+2022-06-27 14:21:47.9468|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:47.9649|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger - - - 301 - - 64.3115ms 
+2022-06-27 14:21:48.0385|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/index.html - - - 200 - text/html;charset=utf-8 91.5552ms 
+2022-06-27 14:21:48.0385|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - 
+2022-06-27 14:21:48.0385|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:48.0385|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - 
+2022-06-27 14:21:48.0385|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:48.0385|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - 
+2022-06-27 14:21:48.0385|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:48.0679|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:21:48.0679|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:21:48.0679|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:21:48.1061|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2022-06-27 14:21:48.1061|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2022-06-27 14:21:48.1061|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2022-06-27 14:21:48.1061|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - - 200 142933 text/css 62.0980ms 
+2022-06-27 14:21:48.1168|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 68.2256ms 
+2022-06-27 14:21:48.1373|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 88.6106ms 
+2022-06-27 14:21:48.2228|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - 
+2022-06-27 14:21:48.2228|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:48.2228|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-bundle.js.map does not match an existing file 
+2022-06-27 14:21:48.2505|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js.map' 
+2022-06-27 14:21:48.2505|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:21:48.3473|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:21:48.3534|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - - 404 - - 130.5278ms 
+2022-06-27 14:21:48.4703|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - 
+2022-06-27 14:21:48.4703|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:48.4703|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+2022-06-27 14:21:48.4703|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js.map' 
+2022-06-27 14:21:48.4703|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:21:48.4703|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:21:48.4703|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.0066ms 
+2022-06-27 14:21:48.5419|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - 
+2022-06-27 14:21:48.5419|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:21:48.6497|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.6819ms 
+2022-06-27 14:22:12.7351|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 
+2022-06-27 14:22:12.7351|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:22:12.7351|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-06-27 14:22:12.7532|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:22:12.7532|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' with route pattern 'api/Auth/api/Auth/Login' is valid for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:22:12.7532|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:22:12.7572|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:9410'. 
+2022-06-27 14:22:12.7572|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-06-27 14:22:12.7572|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:22:12.7572|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:22:12.7572|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-06-27 14:22:12.7902|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(IdentityApi.ViewModels.Account.LoginViewModel) on controller IdentityApi.Controllers.AuthController (IdentityApi). 
+2022-06-27 14:22:12.7902|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-06-27 14:22:12.7902|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-06-27 14:22:12.7902|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-06-27 14:22:12.7902|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-06-27 14:22:12.7902|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-06-27 14:22:12.7902|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller IdentityApi.Controllers.AuthController (IdentityApi) 
+2022-06-27 14:22:12.8592|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action IdentityApi.Controllers.AuthController.Login (IdentityApi) in 65.5144ms 
+2022-06-27 14:22:12.8774|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:22:12.9400|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'IdentityApi.Data.Interfaces.IAccountRepository' while attempting to activate 'IdentityApi.Controllers.AuthController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-27 14:22:12.9793|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 - 500 - text/plain 247.2203ms 
+2022-06-27 14:25:45.8704|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-06-27 14:25:45.9274|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-06-27 14:25:45.9385|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-30869792-1458-454f-9ab8-6e26e995c870.xml'. 
+2022-06-27 14:25:45.9385|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-6e80eba1-dbb5-464b-bb70-f5327041bead.xml'. 
+2022-06-27 14:25:45.9385|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-7fe47b8f-6cda-4994-97c8-a0c6c0358b19.xml'. 
+2022-06-27 14:25:45.9385|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-f27e53c6-fda9-4b18-a305-1e72ab71cdc6.xml'. 
+2022-06-27 14:25:45.9466|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {30869792-1458-454f-9ab8-6e26e995c870}. 
+2022-06-27 14:25:45.9466|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {6e80eba1-dbb5-464b-bb70-f5327041bead}. 
+2022-06-27 14:25:45.9466|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {7fe47b8f-6cda-4994-97c8-a0c6c0358b19}. 
+2022-06-27 14:25:45.9466|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f27e53c6-fda9-4b18-a305-1e72ab71cdc6}. 
+2022-06-27 14:25:45.9592|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {30869792-1458-454f-9ab8-6e26e995c870} with expiration date 2022-09-10 17:38:21Z as default key. 
+2022-06-27 14:25:46.0085|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:25:46.0085|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-06-27 14:25:46.0085|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:25:46.0085|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-06-27 14:25:46.0085|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-06-27 14:25:46.0224|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {30869792-1458-454f-9ab8-6e26e995c870} as the default key. 
+2022-06-27 14:25:46.0224|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {30869792-1458-454f-9ab8-6e26e995c870} was loaded during application startup. 
+2022-06-27 14:25:46.2065|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ResourceApi 
+2022-06-27 14:25:46.2065|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-06-27 14:25:46.2308|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-06-27 14:25:46.2308|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi 
+2022-06-27 14:25:46.2308|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-06-27 14:25:46.2457|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger - - 
+2022-06-27 14:25:46.2457|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-06-27 14:25:46.2457|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:46.2924|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/index.html - - 
+2022-06-27 14:25:46.2924|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:46.3098|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger - - - 301 - - 65.1417ms 
+2022-06-27 14:25:46.3950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/index.html - - - 200 - text/html;charset=utf-8 102.5106ms 
+2022-06-27 14:25:46.4075|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - 
+2022-06-27 14:25:46.4075|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:46.4075|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - 
+2022-06-27 14:25:46.4075|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:46.4075|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - 
+2022-06-27 14:25:46.4075|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:46.4224|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:25:46.4224|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:25:46.4224|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:25:46.4483|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2022-06-27 14:25:46.4483|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2022-06-27 14:25:46.4483|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2022-06-27 14:25:46.4483|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - - 200 142933 text/css 43.9554ms 
+2022-06-27 14:25:46.4483|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 50.1759ms 
+2022-06-27 14:25:46.4775|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 69.0671ms 
+2022-06-27 14:25:46.5740|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - 
+2022-06-27 14:25:46.5740|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:46.5740|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-bundle.js.map does not match an existing file 
+2022-06-27 14:25:46.6042|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js.map' 
+2022-06-27 14:25:46.6042|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:25:46.7114|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:25:46.7114|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - - 404 - - 139.0279ms 
+2022-06-27 14:25:46.8273|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - 
+2022-06-27 14:25:46.8273|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:46.8273|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+2022-06-27 14:25:46.8273|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js.map' 
+2022-06-27 14:25:46.8273|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:25:46.8273|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:25:46.8273|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.2719ms 
+2022-06-27 14:25:46.9008|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - 
+2022-06-27 14:25:46.9008|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:25:47.0588|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 157.9754ms 
+2022-06-27 14:26:07.0338|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 
+2022-06-27 14:26:07.0338|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:26:07.0338|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-06-27 14:26:07.0443|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:26:07.0443|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' with route pattern 'api/Auth/api/Auth/Login' is valid for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:26:07.0443|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:26:07.0443|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:9410'. 
+2022-06-27 14:26:07.0443|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-06-27 14:26:07.0443|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:26:07.0540|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:26:07.0695|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-06-27 14:26:07.1307|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(IdentityApi.ViewModels.Account.LoginViewModel) on controller IdentityApi.Controllers.AuthController (IdentityApi). 
+2022-06-27 14:26:07.1325|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-06-27 14:26:07.1325|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-06-27 14:26:07.1325|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-06-27 14:26:07.1325|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-06-27 14:26:07.1325|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-06-27 14:26:07.1325|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller IdentityApi.Controllers.AuthController (IdentityApi) 
+2022-06-27 14:26:07.2885|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action IdentityApi.Controllers.AuthController.Login (IdentityApi) in 149.1794ms 
+2022-06-27 14:26:07.3243|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:26:07.4361|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'IdentityApi.Data.Interfaces.IAccountRepository' while attempting to activate 'IdentityApi.Controllers.AuthController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-27 14:26:07.5397|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 - 500 - text/plain 505.8344ms 
+2022-06-27 14:27:54.8745|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-06-27 14:27:54.9431|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-06-27 14:27:54.9431|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-30869792-1458-454f-9ab8-6e26e995c870.xml'. 
+2022-06-27 14:27:54.9431|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-6e80eba1-dbb5-464b-bb70-f5327041bead.xml'. 
+2022-06-27 14:27:54.9431|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-7fe47b8f-6cda-4994-97c8-a0c6c0358b19.xml'. 
+2022-06-27 14:27:54.9431|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-f27e53c6-fda9-4b18-a305-1e72ab71cdc6.xml'. 
+2022-06-27 14:27:54.9607|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {30869792-1458-454f-9ab8-6e26e995c870}. 
+2022-06-27 14:27:54.9607|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {6e80eba1-dbb5-464b-bb70-f5327041bead}. 
+2022-06-27 14:27:54.9607|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {7fe47b8f-6cda-4994-97c8-a0c6c0358b19}. 
+2022-06-27 14:27:54.9607|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f27e53c6-fda9-4b18-a305-1e72ab71cdc6}. 
+2022-06-27 14:27:54.9607|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {30869792-1458-454f-9ab8-6e26e995c870} with expiration date 2022-09-10 17:38:21Z as default key. 
+2022-06-27 14:27:55.0185|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:27:55.0185|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-06-27 14:27:55.0212|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-06-27 14:27:55.0212|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-06-27 14:27:55.0212|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-06-27 14:27:55.0212|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {30869792-1458-454f-9ab8-6e26e995c870} as the default key. 
+2022-06-27 14:27:55.0212|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {30869792-1458-454f-9ab8-6e26e995c870} was loaded during application startup. 
+2022-06-27 14:27:55.2159|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ResourceApi 
+2022-06-27 14:27:55.2159|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-06-27 14:27:55.2709|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-06-27 14:27:55.2711|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi 
+2022-06-27 14:27:55.2711|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-06-27 14:27:55.2711|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger - - 
+2022-06-27 14:27:55.2711|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-06-27 14:27:55.2711|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:55.3493|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/index.html - - 
+2022-06-27 14:27:55.3507|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:55.4052|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger - - - 301 - - 120.1861ms 
+2022-06-27 14:27:55.4745|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/index.html - - - 200 - text/html;charset=utf-8 125.2110ms 
+2022-06-27 14:27:55.4847|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - 
+2022-06-27 14:27:55.4847|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:55.4847|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - 
+2022-06-27 14:27:55.4847|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - 
+2022-06-27 14:27:55.4847|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:55.4847|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:55.5041|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:27:55.5041|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:27:55.5041|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-06-27 14:27:55.5303|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2022-06-27 14:27:55.5303|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2022-06-27 14:27:55.5376|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - - 200 142933 text/css 52.7114ms 
+2022-06-27 14:27:55.5376|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2022-06-27 14:27:55.5376|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 60.4441ms 
+2022-06-27 14:27:55.5728|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 87.5399ms 
+2022-06-27 14:27:55.6812|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - 
+2022-06-27 14:27:55.6812|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:55.6812|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-bundle.js.map does not match an existing file 
+2022-06-27 14:27:55.7176|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js.map' 
+2022-06-27 14:27:55.7176|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:27:55.8304|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:27:55.8304|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - - 404 - - 151.6609ms 
+2022-06-27 14:27:55.9300|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - 
+2022-06-27 14:27:55.9300|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:55.9300|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+2022-06-27 14:27:55.9300|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js.map' 
+2022-06-27 14:27:55.9300|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-06-27 14:27:55.9300|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:27:55.9300|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.5754ms 
+2022-06-27 14:27:55.9968|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - 
+2022-06-27 14:27:55.9968|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:27:56.1218|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 124.7296ms 
+2022-06-27 14:28:03.0465|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 
+2022-06-27 14:28:03.0465|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-06-27 14:28:03.0465|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-06-27 14:28:03.0560|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:28:03.0560|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' with route pattern 'api/Auth/api/Auth/Login' is valid for the request path '/api/Auth/api/Auth/Login' 
+2022-06-27 14:28:03.0560|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:28:03.0560|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:9410'. 
+2022-06-27 14:28:03.0560|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-06-27 14:28:03.0560|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-06-27 14:28:03.0560|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:28:03.0699|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-06-27 14:28:03.1065|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(IdentityApi.ViewModels.Account.LoginViewModel) on controller IdentityApi.Controllers.AuthController (IdentityApi). 
+2022-06-27 14:28:03.1065|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-06-27 14:28:03.1065|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-06-27 14:28:03.1065|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-06-27 14:28:03.1065|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-06-27 14:28:03.1065|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-06-27 14:28:03.1065|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller IdentityApi.Controllers.AuthController (IdentityApi) 
+2022-06-27 14:28:03.1901|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action IdentityApi.Controllers.AuthController.Login (IdentityApi) in 80.2891ms 
+2022-06-27 14:28:03.2105|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'IdentityApi.Controllers.AuthController.Login (IdentityApi)' 
+2022-06-27 14:28:03.2844|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'IdentityApi.Data.Interfaces.IAccountRepository' while attempting to activate 'IdentityApi.Controllers.AuthController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-27 14:28:03.3436|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:9410/api/Auth/api/Auth/Login application/json 42 - 500 - text/plain 297.1507ms 
