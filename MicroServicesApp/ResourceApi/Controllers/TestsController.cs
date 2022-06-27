@@ -10,19 +10,20 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
 
 namespace ResourceApi.Controllers
 {
     //CRUD
     [Route("api/[controller]")]
     [ApiController]
-    public class TestsController : BaseController
+    public class TestsController : BaseController<TestsController>
     {
        // private string UserName => User.Claims.Single(c => c.Type == ClaimTypes.).Value.ToString();
         private Guid Id => Guid.Parse(User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value);
 
         //private ITestRepository _testRepository;
-        public TestsController(ITestRepository testRepository) : base(testRepository)
+        public TestsController(ITestRepository testRepository, ILogger<TestsController> logger) : base(testRepository,null,null,logger)
         {
 
         }
@@ -65,7 +66,11 @@ namespace ResourceApi.Controllers
                         return Ok();
                     }
                 }
+                _logger.LogWarning($"Function CreateTest {DateTime.Now} model is invalid ");
+
             }
+            _logger.LogWarning($"Function CreateTest {DateTime.Now} User Id == null");
+
             return BadRequest();
         }
         [HttpPatch("{Id}")]
@@ -74,12 +79,17 @@ namespace ResourceApi.Controllers
         {
             try
             {
-                if (Id== null)
+                if (Id == null)
+                {
+                    _logger.LogWarning($"Function Update {DateTime.Now} Id == null");
                     return BadRequest();
+                }
 
                 var test = await  _testRepository.GetTestByIdAsync((int) Id);
-                if (test == null)
+                if (test == null) {
+                    _logger.LogWarning($"Function Update {DateTime.Now} test == null");
                     return BadRequest("not found");
+                }
                 else
                 {
                     if (!string.IsNullOrEmpty(Title))
@@ -93,25 +103,21 @@ namespace ResourceApi.Controllers
             }
             catch(Exception e)
             {
+                _logger.LogError($"Function Update {DateTime.Now} {e.Message}");
+
                 return BadRequest("Error "+e.Message);
             }
         }
         [HttpDelete("{Id}")]
         public async Task<IActionResult> Delete(int Id)
         {
-            try
-            {
-                if (Id <= 0)
-                    return BadRequest();
-                var result =await _testRepository.RemoveAsync(Id);
-                if(result)
-                    return Ok();
+
+            if (Id <= 0)
                 return BadRequest();
-            }
-            catch (Exception e)
-            {
-                return BadRequest();
-            }
+            var result =await _testRepository.RemoveAsync(Id);
+            if(result)
+                return Ok();
+            return BadRequest();
         }
 
         [HttpGet("[action]/{page}")]
@@ -120,7 +126,6 @@ namespace ResourceApi.Controllers
         {
             try
             {
-               // var tests = 
                 return Ok(JsonSerializer.Serialize(await _testRepository.GetTestsByAvtorId(Id.ToString(), 6, page)));
             }
             catch

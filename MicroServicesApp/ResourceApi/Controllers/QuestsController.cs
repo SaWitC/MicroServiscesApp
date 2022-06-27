@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using ResourceApi.Data;
 using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
@@ -16,29 +19,24 @@ namespace ResourceApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class QuestsController : ControllerBase
+    public class QuestsController : BaseController<QuestsController>
     {
-        private readonly IQuestRepository _questRepository;
-        private readonly ITestRepository _testRepository;
-        private readonly ILeftAnswerRepository _leftAnswerRepository;
-
-
+        private Guid Id => Guid.Parse(User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value);
         public QuestsController(IQuestRepository questRepository,
             ITestRepository testRepository,
-            ILeftAnswerRepository leftAnswerRepository)
-        {
-            _leftAnswerRepository = leftAnswerRepository;
-            _questRepository = questRepository;
-            _testRepository = testRepository;
-        }
+            ILeftAnswerRepository leftAnswerRepository,
+            ILogger<QuestsController> logger):base(testRepository,questRepository,leftAnswerRepository,logger)
+        {}
 
         // GET: api/Quests
         [HttpGet("{TestId}")]
         public async Task<ActionResult> GetQuests(int TestId)
         {
+            _logger.LogInformation($"Function GetQuests {DateTime.Now} input data [testId:{TestId}]");
             return Ok(JsonSerializer.Serialize(await _questRepository.GetQuestsByTestId(TestId)));
         }
 
+        [Authorize]
         [HttpPost("{TestId}")]
         public async Task<ActionResult<Quest>> Create(CreateQuestVM Quest,int? TestId)
         {
@@ -64,15 +62,17 @@ namespace ResourceApi.Controllers
                             await _testRepository.TestCountAdd(test);
                             var IsCreatedAnswer = await _leftAnswerRepository.CreateAsync(Quest.LeftAnswers,quest.Id);
                             
-                            if (IsCreatedAnswer)
+                            if (IsCreatedAnswer) 
                                 return Ok();
                         }
+                        _logger.LogWarning($"Function Create {DateTime.Now} quest == null");
+
                     }
-                    //await _context.SaveChangesAsync();
-                    //return ba();
+                    _logger.LogWarning($"Function Create {DateTime.Now} entity == null");
                 }
+                _logger.LogWarning($"Function Create {DateTime.Now} test == null");
+
             }
-            //return CreatedAtAction("GetQuest", new { id = quest.Id }, quest);
             return BadRequest();
         }
 
@@ -83,6 +83,8 @@ namespace ResourceApi.Controllers
             var quest = await _questRepository.GetQuestByid(id);
             if (quest == null)
             {
+                _logger.LogWarning($"Function DeleteQuest {DateTime.Now} quest == null inputData [id:{id}]");
+
                 return NotFound();
             }
 
@@ -112,8 +114,10 @@ namespace ResourceApi.Controllers
                             return Ok();
                     }
                 }
-               
+                _logger.LogWarning($"Function Update {DateTime.Now} entity == null");
             }
+            _logger.LogWarning($"Function Update {DateTime.Now} model is invalid");
+
             return BadRequest();
         }
 

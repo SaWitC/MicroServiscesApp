@@ -9,20 +9,13 @@ using System.Threading.Tasks;
 
 namespace ResourceApi.Data.Repository
 {
-    public class TestsRepository:ITestRepository
+    public class TestsRepository:BaseRepository<TestsRepository>,ITestRepository
     {
-        private readonly Microsoft.Extensions.Logging.ILogger<TestsRepository> _logger;
-        private readonly AppDbContext _context;
+        public TestsRepository(AppDbContext appDbContext, ILogger<TestsRepository> logger) : base(appDbContext, logger) { }
 
-        public TestsRepository(ILogger<TestsRepository> logger,AppDbContext context)
-        {
-            _context = context;
-            _logger = logger;
-        }
-        //R
         public async Task<System.Collections.Generic.IEnumerable<Models.TestModel>> GetTestsAsync(int size, int page=0)
         {
-            return await _context.testModels.Skip(page * size).Take(size).ToListAsync();
+            return await _appDbContext.testModels.Skip(page * size).Take(size).ToListAsync();
         }
         public async Task<bool> CreateTestAsync(TestModel model)
         {
@@ -30,54 +23,36 @@ namespace ResourceApi.Data.Repository
             {
                 if (!string.IsNullOrEmpty(model.AvtorId) && !string.IsNullOrEmpty(model.Title))
                 {
-                    await _context.testModels.AddAsync(model);
-                    await _context.SaveChangesAsync();
+                    await _appDbContext.testModels.AddAsync(model);
+                    await _appDbContext.SaveChangesAsync();
                     return true;
                 }
             }
-
+            _logger.LogWarning($"{DateTime.Now} model ==null");
             return false;
-            //if (model == null&&model.Quests.Count()>0)
-            //{
-            //    var Quests = new List<Models.Quest>();
-
-            //    var entity =await _context.testModels.AddAsync(model);
-            //    if (entity != null)
-            //    {
-            //        foreach (var item in quests)
-            //        {
-            //            item.TestId = entity.Entity.Id;
-            //            Quests.Add(item);
-            //        }
-            //        await _context.Quests.AddRangeAsync(Quests);
-            //    }
-            //    return false;
-
-            //}
-            //return false;
         }
 
         public async Task<IEnumerable<TestModel>> GetAll()
         {
-            return await _context.testModels.ToListAsync();
+            return await _appDbContext.testModels.ToListAsync();
         }
 
         public async Task<TestModel> GetTestByIdAsync(int Id)
         {
-            return await _context.testModels.FirstOrDefaultAsync(o => o.Id == Id);
+            return await _appDbContext.testModels.FirstOrDefaultAsync(o => o.Id == Id);
         }
 
         public async Task<bool> UpdateAsync(TestModel model)
         {
             try
             {
-                _context.testModels.Update(model);
-                await _context.SaveChangesAsync();
+                _appDbContext.testModels.Update(model);
+                await _appDbContext.SaveChangesAsync();
                 return true;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                _logger.LogError($"{DateTime.Now} updating error {e.Message}");
                 return false;
             }
         }
@@ -86,11 +61,11 @@ namespace ResourceApi.Data.Repository
         {
             try
             {
-                var test =await _context.testModels.FirstOrDefaultAsync(o => o.Id == Id);
+                var test =await _appDbContext.testModels.FirstOrDefaultAsync(o => o.Id == Id);
                 if (test != null)
                 {
-                    _context.testModels.Remove(test);
-                    await _context.SaveChangesAsync();
+                    _appDbContext.testModels.Remove(test);
+                    await _appDbContext.SaveChangesAsync();
                     return true;
                 }
 
@@ -99,14 +74,15 @@ namespace ResourceApi.Data.Repository
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                _logger.LogError($"{DateTime.Now} Remove Error {e.Message}");
+
                 return false;
             }
         }
 
         public async Task<IEnumerable<TestModel>> GetTestsByAvtorId(string Id,int size,int page=0)
         { 
-            return await _context.testModels.Where(o => o.AvtorId == Id).Skip(page*size).Take(size).ToListAsync();
+            return await _appDbContext.testModels.Where(o => o.AvtorId == Id).Skip(page*size).Take(size).ToListAsync();
         }
 
         public async Task<bool> TestCountAdd(TestModel model)
@@ -114,8 +90,8 @@ namespace ResourceApi.Data.Repository
             try
             {
                 model.QuestsCount++;
-                _context.testModels.Update(model);
-                await _context.SaveChangesAsync();
+                _appDbContext.testModels.Update(model);
+                await _appDbContext.SaveChangesAsync();
                 return true;
             }
             catch
@@ -129,25 +105,22 @@ namespace ResourceApi.Data.Repository
             try
             {
                 model.QuestsCount--;
-                _context.testModels.Update(model);
-                await _context.SaveChangesAsync();
+                _appDbContext.testModels.Update(model);
+                await _appDbContext.SaveChangesAsync();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
+                _logger.LogError($"{DateTime.Now} Test count take away {e.Message}");
                 return false;
             }
         }
         public async Task<TestModel> GetFullTestForPassingAsync(int TestId)
         {
-            var result = await _context.testModels.FirstOrDefaultAsync(o => o.Id == TestId);
+            var result = await _appDbContext.testModels.FirstOrDefaultAsync(o => o.Id == TestId);
             if(result!=null)
-                result.Quests = await _context.Quests.Where(o => o.TestId == TestId).Include(o => o.LeftAnswers).ToListAsync();
+                result.Quests = await _appDbContext.Quests.Where(o => o.TestId == TestId).Include(o => o.LeftAnswers).ToListAsync();
             return result;
         }
-
-
-
-
     }
 }

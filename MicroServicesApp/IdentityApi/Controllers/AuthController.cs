@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using IdentityApi.Data.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace IdentityApi.Controllers
 {
@@ -24,8 +25,13 @@ namespace IdentityApi.Controllers
         private readonly IAccountRepository _accountRepository;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
-        public AuthController(IAccountRepository accountRepository, UserManager<User> userManager, SignInManager<User> signInManager)
+        private readonly Logger<AuthController> _logger;
+        public AuthController(IAccountRepository accountRepository,
+            UserManager<User> userManager,
+            SignInManager<User> signInManager,
+            Logger<AuthController> logger)
         {
+            _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
             _accountRepository = accountRepository;
@@ -52,8 +58,8 @@ namespace IdentityApi.Controllers
                     //var createduser = _userManager.FindByNameAsync(user.UserName);
                     
                 }
-
-                return BadRequest("Can not register");
+                _logger.LogWarning("incorrect values ");
+                return BadRequest("Имя пользователя занято");
             }
             else
             {
@@ -75,6 +81,8 @@ namespace IdentityApi.Controllers
                     {
 
                         var token = await _accountRepository.GenerateJWTToken(user);
+                        _logger.LogInformation($"Loged {JsonSerializer.Serialize(user)}");
+
                         return Ok(new {Token=token});
                         //return Ok(res);
                     }

@@ -1,51 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.Extensions.Logging;
 using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
 using ResourceApi.ViewModel;
 
 namespace ResourceApi.Data.Repository
 {
-    public class QuestRepository:IQuestRepository
+    public class QuestRepository:BaseRepository<QuestRepository>,IQuestRepository
     {
-        private readonly AppDbContext _context;
-
-        public QuestRepository(AppDbContext context)
-        {
-            _context = context;
-
-        }
+        public QuestRepository(AppDbContext appDbContext, ILogger<QuestRepository> logger) : base(appDbContext, logger) { }
         public async Task<EntityEntry<Quest>> CreateQuestAsync(int TestId, Quest quest)
         {
+            
             if (TestId > 0)
             {
-                var test = await _context.testModels.FirstOrDefaultAsync(o => o.Id == TestId);
+                var test = await _appDbContext.testModels.FirstOrDefaultAsync(o => o.Id == TestId);
                 if (test != null)
                 {
                     quest.test = test;
                     quest.TestId = test.Id;
-                    var entityEntry =await _context.Quests.AddAsync(quest);
-                    await _context.SaveChangesAsync();
+                    var entityEntry =await _appDbContext.Quests.AddAsync(quest);
+                    await _appDbContext.SaveChangesAsync();
                     return entityEntry;
                 }
+                _logger.LogWarning($"{DateTime.Now} test ==null");
             }
+            _logger.LogWarning($"{DateTime.Now} TestId is incorect {TestId}");
             return null;
         }
         public async Task<EntityEntry<Quest>> CreateQuestAsync(Quest quest)
         {
             try
             {
-                var entity =await _context.Quests.AddAsync(quest);
-                await _context.SaveChangesAsync();
+                var entity =await _appDbContext.Quests.AddAsync(quest);
+                await _appDbContext.SaveChangesAsync();
                 return entity;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                _logger.LogError($"{DateTime.Now} CreateQuestError {e.Message}");
                 return null;
             }
         }
@@ -59,10 +58,12 @@ namespace ResourceApi.Data.Repository
                 Oldquest.Right_answer = model.Right_answer;
                 Oldquest.HelpText = model.HelpText;
 
-                _context.Quests.Update(Oldquest);
-                await _context.SaveChangesAsync();
+                _appDbContext.Quests.Update(Oldquest);
+                await _appDbContext.SaveChangesAsync();
                 return true;
             }
+            _logger.LogWarning($"{DateTime.Now} Edit error model ={JsonSerializer.Serialize(model)}\n oldQuest ={JsonSerializer.Serialize(Oldquest)}");
+
             return false;
         }
 
@@ -70,12 +71,14 @@ namespace ResourceApi.Data.Repository
         {
             try
             {
-                _context.Quests.Remove(model);
-                await _context.SaveChangesAsync();
+                _appDbContext.Quests.Remove(model);
+                await _appDbContext.SaveChangesAsync();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
+                _logger.LogError($"{DateTime.Now} Remove Error {e.Message}");
+
                 return false;
             }
         }
@@ -85,34 +88,38 @@ namespace ResourceApi.Data.Repository
             {
                 if (QuestId != null)
                 {
-                    var quest = await _context.Quests.FirstOrDefaultAsync(o => o.Id == QuestId);
+                    var quest = await _appDbContext.Quests.FirstOrDefaultAsync(o => o.Id == QuestId);
                     if (quest != null)
                     {
-                        _context.Quests.Remove(quest);
-                        await _context.SaveChangesAsync();
+                        _appDbContext.Quests.Remove(quest);
+                        await _appDbContext.SaveChangesAsync();
 
                         return true;
                     }
                 }
+                _logger.LogWarning($"{DateTime.Now}  QuestId ==null");
+
                 return false;
             }
-            catch
+            catch(Exception e)
             {
+                _logger.LogError($"{DateTime.Now} Remove quest error {e.Message}");
+
                 return false;
             }
         }
 
         public async Task<IEnumerable<Quest>> GetQuestsByTestId(int Id)
         {
-            return await _context.Quests.Where(o => o.TestId == Id).Include(o=>o.LeftAnswers).ToListAsync();
+            return await _appDbContext.Quests.Where(o => o.TestId == Id).Include(o=>o.LeftAnswers).ToListAsync();
         }
         public async Task<Quest> GetQuestByid(int id)
         {
-            return await _context.Quests.FirstOrDefaultAsync(o => o.Id == id);
+            return await _appDbContext.Quests.FirstOrDefaultAsync(o => o.Id == id);
         }
         public async Task<IEnumerable<Quest>> GetFullQuestsForPassingAsync(int TestId)
         {
-            var result= await _context.Quests.Where(o => o.TestId == TestId).Include(o => o.LeftAnswers).ToListAsync();
+            var result= await _appDbContext.Quests.Where(o => o.TestId == TestId).Include(o => o.LeftAnswers).ToListAsync();
             return result;
         }
 

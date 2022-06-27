@@ -1,20 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using ResourceApi.Data.Interfaces;
 using ResourceApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ResourceApi.Data.Repository
 {
-    public class LeftAnswerRepository : ILeftAnswerRepository
+    public class LeftAnswerRepository : BaseRepository<LeftAnswerRepository>, ILeftAnswerRepository
     {
-        private readonly AppDbContext _appDbContext;
-        public LeftAnswerRepository(AppDbContext appDbContext)
-        {
-            _appDbContext = appDbContext;
-        }
+        public LeftAnswerRepository(AppDbContext appDbContext,ILogger<LeftAnswerRepository> logger) : base(appDbContext, logger) { }
         public async Task<bool> CreateAsync(List<string> answers, int QuestId)
         {
             try
@@ -31,8 +29,9 @@ namespace ResourceApi.Data.Repository
                 await _appDbContext.SaveChangesAsync();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
+                _logger.LogError($"{DateTime.Now} Create left_answer error {e.Message}");
                 return false;
             }
         }
@@ -46,6 +45,8 @@ namespace ResourceApi.Data.Repository
                 await _appDbContext.SaveChangesAsync();
                 return true;
             }
+            _logger.LogError($"{DateTime.Now} remove error : answer ==null");
+
             return false;    
         }
 
@@ -59,6 +60,8 @@ namespace ResourceApi.Data.Repository
                 await _appDbContext.SaveChangesAsync();
                 return true;
             }
+            _logger.LogError($"{DateTime.Now} update error : answer ==null");
+
             return false;
         }
 
@@ -79,6 +82,7 @@ namespace ResourceApi.Data.Repository
                 await _appDbContext.SaveChangesAsync();
                 return true;
             }
+            _logger.LogError($"{DateTime.Now} valuse is invalid : oldAnswers = {JsonSerializer.Serialize(OldAnswers)}\n NewAnswerTitles = {JsonSerializer.Serialize(NewAnswerTitles)}");
 
             return false;
         }

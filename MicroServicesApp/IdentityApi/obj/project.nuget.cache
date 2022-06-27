@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z9kaG0QDQE8MWbcSE1rJgyGcz2TFMSfMhb2SK2sd/u3ZEEsB+mO7bD9FYQLJ5mNhafkJd/oF1gxRrvw4mEpdtw==",
+  "dgSpecHash": "fkSU0HFvh42s4MD+WfDxtfhLfLoNJOqxBAiiRmC/y6m1ga3lkh2uUrWkna52rGQy3nAAnq6c/muRrG7O27/e3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\Downloads\\MicroServiscesApp\\MicroServicesApp\\IdentityApi\\IdentityApi.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,9 @@
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\nlog\\5.0.1\\nlog.5.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\nlog.extensions.logging\\5.0.1\\nlog.extensions.logging.5.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\nlog.web.aspnetcore\\5.0.0\\nlog.web.aspnetcore.5.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",

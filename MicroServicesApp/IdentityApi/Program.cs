@@ -10,6 +10,7 @@ using IdentityApi.Data;
 using IdentityApi.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using NLog.Web;
 
 namespace IdentityApi
 {
@@ -42,6 +43,10 @@ namespace IdentityApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }).ConfigureLogging(res =>
+                {
+                    res.ClearProviders();
+                    res.SetMinimumLevel(LogLevel.Trace);
+                }).UseNLog();
     }
 }

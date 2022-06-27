@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 //using IdentityApi.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using NLog.Web;
 
 namespace ResourceApi
 {
@@ -26,6 +27,10 @@ namespace ResourceApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }).ConfigureLogging(loging =>
+                {
+                    loging.ClearProviders();
+                    loging.SetMinimumLevel(LogLevel.Trace);
+                }).UseNLog();
     }
 }
