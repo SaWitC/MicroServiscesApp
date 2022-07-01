@@ -20,7 +20,8 @@ namespace ResourceApi.Controllers
     public class TestsController : BaseController<TestsController>
     {
        // private string UserName => User.Claims.Single(c => c.Type == ClaimTypes.).Value.ToString();
-        private Guid Id => Guid.Parse(User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value);
+        public Guid Id => Guid.Parse(User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value);
+        public Guid id { get; set; } = Guid.Empty;
 
         //private ITestRepository _testRepository;
         public TestsController(ITestRepository testRepository, ILogger<TestsController> logger) : base(testRepository,null,null,logger)
@@ -53,8 +54,10 @@ namespace ResourceApi.Controllers
         //[Authorize]
         public async Task<IActionResult> CreateTest(TestModel test)
         {
-            if (Id != Guid.Empty)
+            
+            if (Id != Guid.Empty||id!=Guid.Empty)
             {
+                
                 test.CreatedDate = DateTime.Now;
                 test.QuestsCount = 0;
                 test.AvtorId = Id.ToString();
@@ -67,7 +70,6 @@ namespace ResourceApi.Controllers
                     }
                 }
                 _logger.LogWarning($"Function CreateTest {DateTime.Now} model is invalid ");
-
             }
             _logger.LogWarning($"Function CreateTest {DateTime.Now} User Id == null");
 
@@ -79,7 +81,7 @@ namespace ResourceApi.Controllers
         {
             try
             {
-                if (Id == null)
+                if (Id == null || id != Guid.Empty)
                 {
                     _logger.LogWarning($"Function Update {DateTime.Now} Id == null");
                     return BadRequest();
@@ -133,7 +135,6 @@ namespace ResourceApi.Controllers
                 return BadRequest();
             }
         }
-
 
     }
 }

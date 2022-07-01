@@ -21,6 +21,9 @@ export class TestFormComponent implements OnInit {
   ngOnInit(): void {
     this.auth.isAuhtenticated();
   }
+  ClearImg() {
+    this.testService.formData.LogoImagPath = "";
+  }
 
   Create(form: NgForm) {
     this.testService.createTest(form).subscribe(

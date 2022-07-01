@@ -16,26 +16,27 @@ export class RegisterComponent implements OnInit {
   invalidOperation: boolean = false;
   IsPassvordConfirmed: boolean = true;
 
+
   constructor(public authService: AuthService,
     private router: Router) { }
+
+  IsEmptyMessage: boolean = true;
 
   ngOnInit(): void {
   }
 
-/*  get f() { return this.reactiveForm.controls }*/
+  /*  get f() { return this.reactiveForm.controls }*/
 
   Register(form: NgForm) {
     this.IsPassvordConfirmed = false;
     console.log("1");
-    console.log(form.value.ConfirmPassword);
-    console.log(form.value.Password);
 
     if (form.value.ConfirmPassword == form.value.Password) {
       console.log("2");
       this.IsPassvordConfirmed = true;
       this.authService.Register(form);
-      
     }
+    this.IsEmptyMessage=this.authService.ErrorMessage == "" ? true : false;
   }
 
 }

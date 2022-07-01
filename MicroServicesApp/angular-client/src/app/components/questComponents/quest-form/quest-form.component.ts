@@ -34,10 +34,13 @@ export class QuestFormComponent implements OnInit {
       LeftAnsvers.push(form.value.Left_answer2);
     if (form.value.Left_answer3 != "")
       LeftAnsvers.push(form.value.Left_answer3);
-    if (LeftAnsvers == []) {
-      this.InvalidLeftAnswers = true
+
+    console.log(LeftAnsvers.length)
+    if (LeftAnsvers.length==0) {
+      this.InvalidLeftAnswers = true;
       return;
     }
+
     this.InvalidLeftAnswers = false;
 
     if (this.QuestService.FormData.Id <= 0) {

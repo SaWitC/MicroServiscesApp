@@ -3,6 +3,9 @@
   <h1 class="text-white">Обновление вопроса </h1>
 </ng-template>
 
+<h1 class="text-white">{{TestService.formData.Id}}</h1>
+<h1 class="text-white">{{TestService.formData.Id!=null}}</h1>
+
 <form class="mt-0" *ngIf="TestService.formData.Id!=null" novalidate #form="ngForm" (submit)="Submit(form,TestService.formData.Id)">
   <div *ngIf="TestService.formData.ActiveHelps">
     <label>Подсказка</label>
@@ -31,8 +34,8 @@
     <label class="text-white">Не правильный ответ 1</label>
     <input type="text" class="form-control form-control-lg" id="Left_answer1" #Left_answer1="ngModel" placeholder="Left_answer1" ngModel name="Left_answer1"
            required maxlength="100" />
-    <div ngIf="InvalidLeftAnswers==true" class="alert alert-danger">
-      поле имя обязательно для заполнения
+    <div *ngIf="InvalidLeftAnswers==true" class="alert alert-danger">
+      Должен быть хотябы 1 не верный ответ
     </div>
   </div>
 

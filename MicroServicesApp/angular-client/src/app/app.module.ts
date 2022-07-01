@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MyTestsComponent } from './components/my-tests/my-tests.component';
 import {JwtModule} from "@auth0/angular-jwt";
 import { HttpClientModule } from "@angular/common/http"
-import { acces_Token_Key } from './services/auth.service';
+import { TestPassingServiceService } from './services/test-passing-service.service';
 import {environment } from "src/environments/environment";
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -58,7 +58,7 @@ export function tokenGetter() {
     }),
 
   ],
-  providers: [AuthService, AuthGuard, QuestService],
+  providers: [AuthService, AuthGuard, QuestService, TestPassingServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

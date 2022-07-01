@@ -4,9 +4,8 @@
   <div class="col-md-4 bg-dark">
     <form #form="ngForm" (ngSubmit)="Register(form)">
       <!--<form  novalidate [formGroup]="reactiveForm">-->
-      <div *ngIf="invalidOperation"><p class="text-dander">Incorrect email or password</p></div>
-
-      <p class="text-white">text{{IsPassvordConfirmed}}</p>
+      <div *ngIf="invalidOperation"><p class="text-dander">Не корректный емайл или пароль</p></div>
+      <div><p *ngIf="!IsEmptyMessage" class="text-danger text-center">{{authService.ErrorMessage}}</p></div>
 
       <div class="form-group m-3">
         <label class="text-white" for="UserName">Имя пользователя</label>
@@ -37,7 +36,7 @@
             1 спец символ<br />
             быть не короче 6 символов<br />
           </p>
-          
+
         </div>
       </div>
 
@@ -51,8 +50,8 @@
           <p>Пароли не совпадают</p>
         </div>
         <!--<div *ngIf="IsPassvordConfirmed==false" [hidden]="ConfirmPassword.untouched" class="alert alert-danger">
-    Пароли не совпадают
-  </div>-->
+      Пароли не совпадают
+    </div>-->
       </div>
 
       <button class="btn bg-warning  m-3" type="submit">submit</button>

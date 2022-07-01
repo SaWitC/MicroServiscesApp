@@ -5,6 +5,10 @@ namespace ResourceApi.Models
 {
     public class TestModel
     {
+        public TestModel(int id)
+        {
+            Id = id;
+        }
         public int Id { get; set; }
         public string LogoImagPath { get; set; }
         [Required]

@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\login",
-    "\\src\\app\\components\\questComponents\\quest-form",
-    "\\src\\app\\components\\testcomponents\\test-passing",
-    "\\src\\app\\services",
-    "\\src\\app\\shared"
+    "\\src"
   ],
-  "SelectedNode": "\\src\\app\\components\\login\\login.component.ts",
   "PreviewInSolutionExplorer": false
 }

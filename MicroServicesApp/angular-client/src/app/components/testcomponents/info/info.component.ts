@@ -22,8 +22,6 @@ export class InfoComponent implements OnInit {
     this.Id = this.activateRoute.snapshot.params['Id'];
 
     this.QuestService.GetQuestsByTestId(this.Id);
-
-    //this.TestService.getTestById();
   }
 
   RemoveQuest(id:number) {

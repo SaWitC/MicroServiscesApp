@@ -20,7 +20,9 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private jwtHelperService: JwtHelperService,
-    private router:Router) { }
+    private router: Router) { }
+
+   ErrorMessage: string;
 
   
 
@@ -51,10 +53,13 @@ export class AuthService {
     return this.http.post("http://localhost:46574/api/Auth/api/Auth/Register", creadentialsreg).subscribe(
       response => {
         console.log("Done");
+        this.ErrorMessage = '';
+
       },
       err => {
         this.invalidLogin = true;
-        console.log(err);
+        console.log(err.error);
+        this.ErrorMessage = err.error;
       });
   }
 
