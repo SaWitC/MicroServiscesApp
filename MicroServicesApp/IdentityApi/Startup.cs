@@ -17,6 +17,7 @@ using IdentityApi.Data.Repositories;
 using IdentityApi.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace IdentityApi
 {
@@ -44,6 +45,8 @@ namespace IdentityApi
             });
             var authOptions = Configuration.GetSection("Auth");
             services.Configure<AuthOptions>(authOptions);
+
+            var AuthOptionsForVlidation = Configuration.GetSection("Auth").Get<AuthOptions>();
             services.AddControllers();
             
             services.AddSwaggerGen(c =>
@@ -56,6 +59,24 @@ namespace IdentityApi
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = AuthOptionsForVlidation.Issuer,
+
+                    ValidateAudience = true,
+                    ValidAudience = AuthOptionsForVlidation.Audience,
+
+                    ValidateLifetime = true,
+
+                    IssuerSigningKey = AuthOptionsForVlidation.GetSymetricSecurityKey(),
+                    ValidateIssuerSigningKey = true
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

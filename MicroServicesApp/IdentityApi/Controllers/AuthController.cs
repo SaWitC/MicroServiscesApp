@@ -15,6 +15,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using IdentityApi.Data.Interfaces;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IdentityApi.Controllers
 {
@@ -92,6 +93,13 @@ namespace IdentityApi.Controllers
                 return Unauthorized();
             }
             return Unauthorized();
+        }
+        [Authorize(Roles = "user")]
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetInfoAbutUser()
+        {
+            return Ok();
         }
     }
 }

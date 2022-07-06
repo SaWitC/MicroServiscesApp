@@ -49,7 +49,7 @@ namespace ResourceApi
                     opt.AllowAnyHeader();
                     opt.AllowAnyMethod();
                     opt.AllowAnyOrigin();
-                    });
+                });
             });
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>

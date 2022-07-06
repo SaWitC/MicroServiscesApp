@@ -51,7 +51,7 @@ namespace ResourceApi.Controllers
         ///C
         [HttpPost]
         [Route("api/[controller]/[action]")]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> CreateTest(TestModel test)
         {
             
@@ -76,6 +76,7 @@ namespace ResourceApi.Controllers
             return BadRequest();
         }
         [HttpPatch("{Id}")]
+        [Authorize]
 
         public async Task<IActionResult> Update(int? Id,string Title,string Image)
         {
@@ -111,6 +112,7 @@ namespace ResourceApi.Controllers
             }
         }
         [HttpDelete("{Id}")]
+        [Authorize]
         public async Task<IActionResult> Delete(int Id)
         {
 

@@ -1,4 +1,6 @@
-﻿using ResourceApi.Models;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using ResourceApi.Models;
+using ResourceApi.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,11 @@ namespace ResourceApi.Tests.TestDataReturnFunctions
         public static async Task<IEnumerable<Quest>> ReturnQuests(Quest model)
         {
             return new List<Quest>() { model };
+        }
+
+        public static async Task<Quest> ReturnQuest(Quest model,int id)
+        {
+            return model;
         }
     }
 }

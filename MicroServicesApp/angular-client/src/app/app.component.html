@@ -5,8 +5,19 @@
   </a>
 
   <ul class="nav nav-pills me-5">
-    <li class="nav-item"><a class="btn text-white" routerLink="/Login">Логин</a></li>
+    <li><a class="btn text-white" routerLink="/Login">Логин</a></li>
+
+    <!--<li class="nav-item">
+      <ng-template #logout>
+        <div>
+          <button (click)="logOut()" class="text-white btn">Выйти</button>
+        </div>
+      </ng-template>
+    </li>-->
+
     <li class="nav-item"><a class="btn text-white" routerLink="/Register">Регистрация</a></li>
+    <li class="nav-item"><a class="btn text-white" routerLink="/PersonalData">Аккаунт</a></li>
+
     <li class="nav-item"> <a class="btn text-white" routerLink="/CreateTest">CreateTest</a></li>
     <li class="nav-item"> <a class="btn text-white" routerLink="/MyTests">Мои Тесты</a></li>
     <li class="nav-item"><a class="btn text-white" routerLink="/Tests">Тесты</a></li>

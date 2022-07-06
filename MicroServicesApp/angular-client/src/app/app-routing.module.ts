@@ -9,6 +9,7 @@ import { DetailsComponent } from "./components/testcomponents/details/details.co
 import { RegisterComponent } from './components/register/register.component'
 import { InfoComponent } from './components/testcomponents/info/info.component'
 import { TestPassingComponent } from './components/testcomponents/test-passing/test-passing.component'
+import { PersonalDataComponent } from './components/personal-data/personal-data.component';
 
 
 
@@ -22,7 +23,9 @@ const routes: Routes = [
   { path: "Tests", component: DetailsComponent },
   { path: "Register", component: RegisterComponent },
   { path: "MyTests/TestInfo/:Id", component: InfoComponent, data: { breadcrumbs: 'Profile info' } },
-  { path: "TestPassing/:Id", component: TestPassingComponent, data: { breadcrumbs: 'Profile info' } }
+  { path: "TestPassing/:Id", component: TestPassingComponent, data: { breadcrumbs: 'Profile info' } },
+  { path: "PersonalData", component: PersonalDataComponent, canActivate: [AuthGuard] }
+
 
 
 

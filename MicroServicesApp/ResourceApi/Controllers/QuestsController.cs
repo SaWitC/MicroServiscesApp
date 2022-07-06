@@ -78,6 +78,8 @@ namespace ResourceApi.Controllers
 
         // DELETE: api/Quests/5
         [HttpDelete("{id}")]
+        [Authorize]
+
         public async Task<IActionResult> DeleteQuest(int id)
         {
             var quest = await _questRepository.GetQuestByid(id);
@@ -94,6 +96,8 @@ namespace ResourceApi.Controllers
         }
 
         [HttpPatch("{id}")]
+        [Authorize]
+
         public async Task<IActionResult> Update(CreateQuestVM Quest,int id)
         {
             if (ModelState.IsValid)

@@ -26,7 +26,6 @@ export class TestServiceService {
   GetTestes(page:number) {
     return this.http.get(`http://localhost:9410/api/Tests/GetTests/${page}`).toPromise()
       .then(res => {
-        console.log("res");
         this.list = [];
 
         //console.log(res as Test[]);
@@ -51,8 +50,6 @@ export class TestServiceService {
     this.http.get(`http://localhost:9410/api/Tests/GetTests/0`)
       .toPromise().then(res => {
         this.list = res as Test[];
-
-        console.log(res as Test[]);
       });
   }
 
@@ -61,12 +58,10 @@ export class TestServiceService {
       .toPromise().then(
       res => {
           this.listByAvtor = res as Test[];
-          console.log(res as Test[]);
       })
       .catch(
       err => {
         console.log(err);
-
       });
   }
 

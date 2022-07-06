@@ -15,7 +15,8 @@ export const acces_Token_Key = "ResourceAccesToken";
 })
 export class AuthService {
 
-  invalidLogin:boolean=true;
+  invalidLogin: boolean = true;
+  //isAutenticated: boolean = false;
 
   constructor(
     private http: HttpClient,

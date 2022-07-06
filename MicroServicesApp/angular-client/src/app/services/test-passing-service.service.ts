@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { TestCompletedModel } from "src/app/shared/Models/test-completed-model.=model";
-import { Test } from "src/app/shared/Models/test.model";
+import { Test } from "../shared/Models/test.model";
 import { Quest, Quest2 } from '../shared/Models/quest.model';
 import { NextNotification } from 'rxjs';
 

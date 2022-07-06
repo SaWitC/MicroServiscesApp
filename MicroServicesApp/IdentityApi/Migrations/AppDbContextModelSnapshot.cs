@@ -19,6 +19,36 @@ namespace IdentityApi.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("IdentityApi.Models.CostomisationModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("BgColor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ButtonColor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ButtonTextColor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TextColor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("costomisations");
+                });
+
             modelBuilder.Entity("IdentityApi.Models.User", b =>
                 {
                     b.Property<string>("Id")
@@ -213,6 +243,17 @@ namespace IdentityApi.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("IdentityApi.Models.CostomisationModel", b =>
+                {
+                    b.HasOne("IdentityApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

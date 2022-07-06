@@ -29,6 +29,7 @@ export class TestFormComponent implements OnInit {
     this.testService.createTest(form).subscribe(
       res => {
         console.log(res);
+        form.reset();
       },
       err => {
         console.log(err);

@@ -30,11 +30,17 @@ namespace ResourceApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int?>("modelId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("QuestId");
+
+                    b.HasIndex("modelId");
 
                     b.ToTable("LeftAnswers");
                 });
@@ -109,6 +115,43 @@ namespace ResourceApi.Migrations
                     b.ToTable("testModels");
                 });
 
+            modelBuilder.Entity("ResourceApi.Models.simpleModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("ActiveHelps")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("AvtorId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("LogoImagPath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("QuestsCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("simpleModel");
+                });
+
             modelBuilder.Entity("ResourceApi.Models.LeftAnswer", b =>
                 {
                     b.HasOne("ResourceApi.Models.Quest", null)
@@ -116,6 +159,12 @@ namespace ResourceApi.Migrations
                         .HasForeignKey("QuestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("ResourceApi.Models.simpleModel", "model")
+                        .WithMany()
+                        .HasForeignKey("modelId");
+
+                    b.Navigation("model");
                 });
 
             modelBuilder.Entity("ResourceApi.Models.Quest", b =>

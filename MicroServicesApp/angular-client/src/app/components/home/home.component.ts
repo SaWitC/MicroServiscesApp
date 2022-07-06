@@ -16,13 +16,15 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router,
     public testService: TestServiceService,
-    private auth: AuthService) { }
+    public auth: AuthService) { }
 
   page: number = 0;
 
   ngOnInit(): void {
     this.testService.GetTestes(this.page)
     this.invalidLogin = !this.auth.isAuhtenticated();
+
+    
   }
 
   NextPage() {
@@ -44,7 +46,11 @@ export class HomeComponent implements OnInit {
     this.page = 0;
     this.testService.GetTestes(this.page)
     this.testService.refreshList();
+
+    
   }
+
+  
 
 
   //isAuhtenticated():boolean {
@@ -58,9 +64,9 @@ export class HomeComponent implements OnInit {
 
   //}
 
-  logOut() {
-    this.auth.logOut();
-    this.invalidLogin = true;
-  }
+  //logOut() {
+  //  this.auth.logOut();
+  //  this.invalidLogin = true;
+  //}
 
 }

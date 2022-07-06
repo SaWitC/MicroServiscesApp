@@ -9,7 +9,6 @@ import { MyTestsComponent } from './components/my-tests/my-tests.component';
 import {JwtModule} from "@auth0/angular-jwt";
 import { HttpClientModule } from "@angular/common/http"
 import { TestPassingServiceService } from './services/test-passing-service.service';
-import {environment } from "src/environments/environment";
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from "./services/auth.service";
@@ -21,6 +20,7 @@ import { QuestFormComponent } from './components/questComponents/quest-form/ques
 import { QuestService } from "./services/quest.service";
 import { InfoComponent } from './components/testcomponents/info/info.component';
 import { TestPassingComponent } from './components/testcomponents/test-passing/test-passing.component';
+import { PersonalDataComponent } from './components/personal-data/personal-data.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -38,7 +38,8 @@ export function tokenGetter() {
     RegisterComponent,
     QuestFormComponent,
     InfoComponent,
-    TestPassingComponent
+    TestPassingComponent,
+    PersonalDataComponent
     //HttpClientModule,
 
   ],
@@ -52,7 +53,7 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ["localhost:9410"],
+        allowedDomains: ["localhost:9410","localhost:46574"],
         disallowedRoutes:[]
         }
     }),
