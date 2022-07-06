@@ -7,6 +7,7 @@ import { JwtHelperService } from "@auth0/angular-jwt"
 import { Router } from "@angular/router"
 import { tap } from "rxjs/operators";
 import {NgForm} from "@angular/forms"
+import { UserModel } from '../shared/Models/user-model.model';
 
 export const acces_Token_Key = "ResourceAccesToken";
 
@@ -16,6 +17,7 @@ export const acces_Token_Key = "ResourceAccesToken";
 export class AuthService {
 
   invalidLogin: boolean = true;
+  CurrentUser: UserModel;
   //isAutenticated: boolean = false;
 
   constructor(
@@ -24,8 +26,6 @@ export class AuthService {
     private router: Router) { }
 
    ErrorMessage: string;
-
-  
 
   isAuhtenticated(): boolean {
     var token: string = "";
@@ -83,5 +83,20 @@ export class AuthService {
         this.invalidLogin = true;
         console.log(err);
       });
+  }
+
+  GetInfoAboutCurrentUser() {
+    return this.http.get("http://localhost:46574/api/Auth/GetInfoAbutUser").subscribe(res => {
+      console.log(res);
+      console.log("==================")
+      console.log(res as UserModel);
+
+
+      this.CurrentUser = res as UserModel;
+      console.log(this.CurrentUser.userName);
+    },
+      err => {
+        console.log(err)
+      }    )
   }
 }

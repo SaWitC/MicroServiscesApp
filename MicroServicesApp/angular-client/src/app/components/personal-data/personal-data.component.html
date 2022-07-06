@@ -1,7 +1,35 @@
-<p>personal-data works!</p>
 
-<div class="btn-group-vertical">
-  <button (click)="logOut()" class="btn bg-info">Logout</button>
-  <button (click)="test()" class="btn bg-info">test</button>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="btn-group-vertical w-100">
+      <button (click)="openSection(0)"> Костомизация</button>
+      <button (click)="openSection(1)" class="btn bg-info form-control">Персональные данные</button>
+      <button (click)="logOut()" class="btn bg-info form-control">Выйти</button>
+    </div>
+  </div>
+  <div class="col-lg-9">
+      <div class="row" [ngSwitch]="openSectionNumber" >
+        <ng-template ngSwitchDefault>
+          <h5 class="text-center text-white">Костомизация</h5>
+          <div class="w-100 row">
+            <div class="col-8">Цвет текста</div><div class="col-4"><app-colorpicker>load</app-colorpicker></div>
+          </div>
 
+        </ng-template>
+
+        <ng-template ngSwitchCase="1">
+          <h5 class="text-center text-white">Персональные данные</h5>
+          <div class="w-100 row">
+            <div class="col-8"><h6 class="text-white">Имя пользователя</h6></div><div class="col-4"><p class="text-white">{{this.auth.CurrentUser.userName}}</p></div>
+            <div class="col-8"><h6 class="text-white">Email</h6></div><div class="col-4"><p class="text-white">{{this.auth.CurrentUser.email}}</p></div>
+            <div class="col-8"><h6 class="text-white">Email подтвержден</h6></div><div class="col-4"><p class="text-white">{{this.auth.CurrentUser.emailConfirmed}}</p></div>
+            <div class="col-8"><h6 class="text-white">Номер телефона</h6></div><div class="col-4"><p class="text-white">{{this.auth.CurrentUser.phoneNumber}}</p></div>
+          </div>
+
+        </ng-template>
+     
+
+      </div>
+  </div>
 </div>
+

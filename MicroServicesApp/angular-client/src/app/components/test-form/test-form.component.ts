@@ -4,6 +4,8 @@ import { NgForm } from '@angular/forms';
 /*import { Test } from "src/app/shared/Models/test.model"*/
 import { TestServiceService } from "../../services/test-service.service"
 import { AuthService } from "../../services/auth.service"
+import { Route, Router } from '@angular/router'
+import { BooleanLiteral } from 'typescript';
 /*import {HttpClient} from "@angular/common/http"*/
 
 @Component({
@@ -15,7 +17,9 @@ export class TestFormComponent implements OnInit {
 
   //list:Test[];
 
-  constructor(public testService: TestServiceService,
+  constructor(
+    private router: Router,
+    public testService: TestServiceService,
     private auth:AuthService) { }
 
   ngOnInit(): void {
@@ -26,14 +30,15 @@ export class TestFormComponent implements OnInit {
   }
 
   Create(form: NgForm) {
-    this.testService.createTest(form).subscribe(
-      res => {
-        console.log(res);
-        form.reset();
-      },
-      err => {
-        console.log(err);
-      });
+      this.testService.createTest(form).subscribe(
+        res => {
+          console.log(res);
+          form.reset();
+          this.router.navigate([["/"]]);
+        },
+        err => {
+          console.log(err);
+        });
+    
   }
-
 }

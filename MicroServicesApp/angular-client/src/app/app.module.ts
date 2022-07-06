@@ -21,6 +21,9 @@ import { QuestService } from "./services/quest.service";
 import { InfoComponent } from './components/testcomponents/info/info.component';
 import { TestPassingComponent } from './components/testcomponents/test-passing/test-passing.component';
 import { PersonalDataComponent } from './components/personal-data/personal-data.component';
+import { ColorpickerComponent } from './components/colorpicker/colorpicker/colorpicker.component';
+
+
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -39,7 +42,8 @@ export function tokenGetter() {
     QuestFormComponent,
     InfoComponent,
     TestPassingComponent,
-    PersonalDataComponent
+    PersonalDataComponent,
+    ColorpickerComponent
     //HttpClientModule,
 
   ],

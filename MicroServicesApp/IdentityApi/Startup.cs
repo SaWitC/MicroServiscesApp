@@ -56,6 +56,7 @@ namespace IdentityApi
 
             services.AddDbContext<AppDbContext>(o =>
                 o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
@@ -89,10 +90,10 @@ namespace IdentityApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IdentityApi v1"));
             }
 
-            app.UseCors();
             app.UseRouting();
-            
+            app.UseCors();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

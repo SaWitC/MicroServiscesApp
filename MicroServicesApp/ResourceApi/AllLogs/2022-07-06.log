@@ -1,0 +1,269 @@
+2022-07-06 17:32:21.4595|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-07-06 17:32:21.5308|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-30869792-1458-454f-9ab8-6e26e995c870.xml'. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-6e80eba1-dbb5-464b-bb70-f5327041bead.xml'. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-7fe47b8f-6cda-4994-97c8-a0c6c0358b19.xml'. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys\key-f27e53c6-fda9-4b18-a305-1e72ab71cdc6.xml'. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {30869792-1458-454f-9ab8-6e26e995c870}. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {6e80eba1-dbb5-464b-bb70-f5327041bead}. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {7fe47b8f-6cda-4994-97c8-a0c6c0358b19}. 
+2022-07-06 17:32:21.5410|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f27e53c6-fda9-4b18-a305-1e72ab71cdc6}. 
+2022-07-06 17:32:21.5613|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {30869792-1458-454f-9ab8-6e26e995c870} with expiration date 2022-09-10 17:38:21Z as default key. 
+2022-07-06 17:32:21.6138|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-07-06 17:32:21.6138|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-07-06 17:32:21.6138|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-07-06 17:32:21.6186|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-07-06 17:32:21.6186|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-07-06 17:32:21.6186|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {30869792-1458-454f-9ab8-6e26e995c870} as the default key. 
+2022-07-06 17:32:21.6186|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {30869792-1458-454f-9ab8-6e26e995c870} was loaded during application startup. 
+2022-07-06 17:32:22.0539|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ResourceApi 
+2022-07-06 17:32:22.0539|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-07-06 17:32:22.1362|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-07-06 17:32:22.1362|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\USER\Downloads\MicroServiscesApp\MicroServicesApp\ResourceApi 
+2022-07-06 17:32:22.1362|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-07-06 17:32:22.1539|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger - - 
+2022-07-06 17:32:22.1539|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-07-06 17:32:22.1539|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:22.2263|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/index.html - - 
+2022-07-06 17:32:22.2263|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:22.2354|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger - - - 301 - - 82.3622ms 
+2022-07-06 17:32:22.3680|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/index.html - - - 200 - text/html;charset=utf-8 141.7054ms 
+2022-07-06 17:32:22.3680|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - 
+2022-07-06 17:32:22.3680|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - 
+2022-07-06 17:32:22.3680|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:22.3680|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:22.3680|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - 
+2022-07-06 17:32:22.3680|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:22.4026|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-07-06 17:32:22.4026|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-07-06 17:32:22.4026|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-07-06 17:32:22.4693|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2022-07-06 17:32:22.4693|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2022-07-06 17:32:22.4693|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui.css - - - 200 142933 text/css 93.1741ms 
+2022-07-06 17:32:22.4693|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2022-07-06 17:32:22.4833|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 102.2823ms 
+2022-07-06 17:32:22.5076|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 127.2759ms 
+2022-07-06 17:32:22.8087|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - 
+2022-07-06 17:32:22.8087|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:22.8087|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-bundle.js.map does not match an existing file 
+2022-07-06 17:32:22.8513|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js.map' 
+2022-07-06 17:32:22.8513|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-07-06 17:32:23.5116|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-07-06 17:32:23.5116|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-bundle.js.map - - - 404 - - 706.0928ms 
+2022-07-06 17:32:23.6225|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - 
+2022-07-06 17:32:23.6225|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:23.6225|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger-ui-standalone-preset.js.map does not match an existing file 
+2022-07-06 17:32:23.6225|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js.map' 
+2022-07-06 17:32:23.6225|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-07-06 17:32:23.6225|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-07-06 17:32:23.6225|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.0332ms 
+2022-07-06 17:32:23.7028|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - 
+2022-07-06 17:32:23.7028|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:32:23.7942|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.3562ms 
+2022-07-06 17:43:22.8328|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:9410/api/Tests/GetTestsByAvtor/0 - - 
+2022-07-06 17:43:22.8402|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:43:22.8402|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|OPTIONS requests are not supported 
+2022-07-06 17:43:22.8960|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Tests/GetTestsByAvtor/0' 
+2022-07-06 17:43:22.8960|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint '405 HTTP Method Not Supported' 
+2022-07-06 17:43:22.9055|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:4200'. 
+2022-07-06 17:43:22.9055|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-07-06 17:43:22.9055|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request is a preflight request. 
+2022-07-06 17:43:22.9160|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:9410/api/Tests/GetTestsByAvtor/0 - - - 204 - - 87.7491ms 
+2022-07-06 17:43:22.9160|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/api/Tests/GetTestsByAvtor/0 - - 
+2022-07-06 17:43:22.9160|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:43:22.9517|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-07-06 17:43:22.9517|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Tests/GetTestsByAvtor/0' 
+2022-07-06 17:43:22.9517|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi)' with route pattern 'api/Tests/GetTestsByAvtor/{page}' is valid for the request path '/api/Tests/GetTestsByAvtor/0' 
+2022-07-06 17:43:22.9517|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi)' 
+2022-07-06 17:43:22.9517|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:4200'. 
+2022-07-06 17:43:22.9517|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-07-06 17:43:23.5969|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2022-07-06 17:43:23.5969|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2022-07-06 17:43:23.6039|0|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2022-07-06 17:43:23.6039|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi)' 
+2022-07-06 17:43:23.6039|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-07-06 17:43:23.6579|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetTestsByAvtor", controller = "Tests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTestsByAvtor(Int32) on controller ResourceApi.Controllers.TestsController (ResourceApi). 
+2022-07-06 17:43:23.6579|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-07-06 17:43:23.6579|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-07-06 17:43:23.6579|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-07-06 17:43:23.6579|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-07-06 17:43:23.6579|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-07-06 17:43:23.6579|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ResourceApi.Controllers.TestsController (ResourceApi) 
+2022-07-06 17:43:23.9312|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-07-06 17:43:23.9529|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ResourceApi.Controllers.TestsController (ResourceApi) 
+2022-07-06 17:43:23.9529|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'page' of type 'System.Int32' ... 
+2022-07-06 17:43:23.9619|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'page' of type 'System.Int32' using the name 'page' in request data ... 
+2022-07-06 17:43:23.9619|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'page' of type 'System.Int32'. 
+2022-07-06 17:43:23.9619|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'page' of type 'System.Int32'. 
+2022-07-06 17:43:23.9619|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'page' of type 'System.Int32' ... 
+2022-07-06 17:43:23.9619|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'page' of type 'System.Int32'. 
+2022-07-06 17:43:23.9619|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:43:23.9619|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:43:23.9619|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:43:23.9619|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:43:23.9619|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi) - Validation state: Valid 
+2022-07-06 17:43:23.9619|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi) with arguments (0) 
+2022-07-06 17:43:24.4141|0|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property '"modelId"."LeftAnswer"' was created in shadow state because there are no eligible CLR members with a matching name. 
+2022-07-06 17:43:24.5186|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-07-06 17:43:24.8143|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<TestModel>()
+    .Where(o => o.AvtorId == __Id_0)
+    .Skip(__p_1)
+    .Take(__p_2)' 
+2022-07-06 17:43:24.9277|0|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-07-06 17:43:24.9401|0|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-07-06 17:43:25.0095|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<TestModel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TestModel.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TestModel.ActiveHelps (bool) Required, 1], [Property: TestModel.AvtorId (string), 2], [Property: TestModel.CreatedDate (DateTime) Required, 3], [Property: TestModel.Description (string) Required MaxLength(2000), 4], [Property: TestModel.LogoImagPath (string), 5], [Property: TestModel.QuestsCount (int) Required, 6], [Property: TestModel.Title (string) Required MaxLength(100), 7], }
+        SELECT t.Id, t.ActiveHelps, t.AvtorId, t.CreatedDate, t.Description, t.LogoImagPath, t.QuestsCount, t.Title
+        FROM testModels AS t
+        WHERE t.AvtorId == @__Id_0
+        ORDER BY (SELECT 1)
+        OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TestModel>, 
+    ResourceApi.Data.AppDbContext, 
+    False, 
+    False
+)' 
+2022-07-06 17:43:25.0481|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-07-06 17:43:25.1002|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (49ms). 
+2022-07-06 17:43:25.1138|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:43:31.6328|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:43:31.6409|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__Id_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActiveHelps], [t].[AvtorId], [t].[CreatedDate], [t].[Description], [t].[LogoImagPath], [t].[QuestsCount], [t].[Title]
+FROM [testModels] AS [t]
+WHERE [t].[AvtorId] = @__Id_0
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY 
+2022-07-06 17:43:31.8572|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (219ms) [Parameters=[@__Id_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActiveHelps], [t].[AvtorId], [t].[CreatedDate], [t].[Description], [t].[LogoImagPath], [t].[QuestsCount], [t].[Title]
+FROM [testModels] AS [t]
+WHERE [t].[AvtorId] = @__Id_0
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY 
+2022-07-06 17:43:31.8883|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TestModel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-07-06 17:43:31.9202|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-07-06 17:43:31.9202|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:43:31.9202|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:43:31.9406|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7965.9011ms. 
+2022-07-06 17:43:31.9406|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:43:31.9406|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:43:31.9406|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:43:31.9406|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:43:31.9406|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:43:31.9406|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:43:31.9406|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-07-06 17:43:31.9406|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-07-06 17:43:31.9406|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-07-06 17:43:31.9406|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-07-06 17:43:31.9406|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-07-06 17:43:31.9406|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2022-07-06 17:43:31.9406|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.String'. 
+2022-07-06 17:43:31.9482|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-07-06 17:43:31.9482|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:43:31.9482|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:43:31.9482|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi) in 8288.9292ms 
+2022-07-06 17:43:31.9482|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ResourceApi.Controllers.TestsController.GetTestsByAvtor (ResourceApi)' 
+2022-07-06 17:43:31.9482|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed. 
+2022-07-06 17:43:31.9482|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/api/Tests/GetTestsByAvtor/0 - - - 200 - text/plain;+charset=utf-8 9031.5980ms 
+2022-07-06 17:58:12.1545|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:9410/api/Tests/GetTests/0 - - 
+2022-07-06 17:58:12.1545|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-07-06 17:58:12.1686|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter 
+2022-07-06 17:58:12.1686|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Tests/GetTests/0' 
+2022-07-06 17:58:12.1686|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' with route pattern 'api/Tests/GetTests/{page}' is valid for the request path '/api/Tests/GetTests/0' 
+2022-07-06 17:58:12.1686|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' 
+2022-07-06 17:58:12.1686|0|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:4200'. 
+2022-07-06 17:58:12.1686|0|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2022-07-06 17:58:12.1686|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-07-06 17:58:12.1816|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' 
+2022-07-06 17:58:12.2641|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetTests", controller = "Tests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTests(System.String, Int32) on controller ResourceApi.Controllers.TestsController (ResourceApi). 
+2022-07-06 17:58:12.2641|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-07-06 17:58:12.2641|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-07-06 17:58:12.2641|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-07-06 17:58:12.2641|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-07-06 17:58:12.2641|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-07-06 17:58:12.2641|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ResourceApi.Controllers.TestsController (ResourceApi) 
+2022-07-06 17:58:12.2766|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ResourceApi.Controllers.TestsController (ResourceApi) 
+2022-07-06 17:58:12.2766|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'category' of type 'System.String' ... 
+2022-07-06 17:58:12.2766|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'category' of type 'System.String' using the name '' in request data ... 
+2022-07-06 17:58:12.2766|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name '' for binding parameter 'category' of type 'System.String'. 
+2022-07-06 17:58:12.2766|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'category' of type 'System.String'. 
+2022-07-06 17:58:12.2766|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'category' of type 'System.String'. 
+2022-07-06 17:58:12.2766|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'category' of type 'System.String' ... 
+2022-07-06 17:58:12.2937|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'category' of type 'System.String'. 
+2022-07-06 17:58:12.2937|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'page' of type 'System.Int32' ... 
+2022-07-06 17:58:12.2937|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'page' of type 'System.Int32' using the name 'page' in request data ... 
+2022-07-06 17:58:12.2937|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'page' of type 'System.Int32'. 
+2022-07-06 17:58:12.2937|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'page' of type 'System.Int32'. 
+2022-07-06 17:58:12.2937|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'page' of type 'System.Int32' ... 
+2022-07-06 17:58:12.2937|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'page' of type 'System.Int32'. 
+2022-07-06 17:58:12.2937|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:58:12.2937|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:58:12.2937|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:58:12.2937|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:58:12.2937|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ResourceApi.Controllers.TestsController.GetTests (ResourceApi) - Validation state: Valid 
+2022-07-06 17:58:12.2937|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ResourceApi.Controllers.TestsController.GetTests (ResourceApi) with arguments (, 0) 
+2022-07-06 17:58:12.3531|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2022-07-06 17:58:12.3531|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<TestModel>()
+    .Skip(__p_0)
+    .Take(__p_1)' 
+2022-07-06 17:58:12.3531|0|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-07-06 17:58:12.3743|0|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-07-06 17:58:12.3743|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<TestModel>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TestModel.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TestModel.ActiveHelps (bool) Required, 1], [Property: TestModel.AvtorId (string), 2], [Property: TestModel.CreatedDate (DateTime) Required, 3], [Property: TestModel.Description (string) Required MaxLength(2000), 4], [Property: TestModel.LogoImagPath (string), 5], [Property: TestModel.QuestsCount (int) Required, 6], [Property: TestModel.Title (string) Required MaxLength(100), 7], }
+        SELECT t.Id, t.ActiveHelps, t.AvtorId, t.CreatedDate, t.Description, t.LogoImagPath, t.QuestsCount, t.Title
+        FROM testModels AS t
+        ORDER BY (SELECT 1)
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TestModel>, 
+    ResourceApi.Data.AppDbContext, 
+    False, 
+    False
+)' 
+2022-07-06 17:58:12.3838|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-07-06 17:58:12.3838|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-07-06 17:58:12.3838|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:58:18.9906|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:58:18.9906|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActiveHelps], [t].[AvtorId], [t].[CreatedDate], [t].[Description], [t].[LogoImagPath], [t].[QuestsCount], [t].[Title]
+FROM [testModels] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2022-07-06 17:58:19.1693|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (178ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActiveHelps], [t].[AvtorId], [t].[CreatedDate], [t].[Description], [t].[LogoImagPath], [t].[QuestsCount], [t].[Title]
+FROM [testModels] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2022-07-06 17:58:19.1693|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'TestModel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2022-07-06 17:58:19.1693|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-07-06 17:58:19.1693|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:58:19.1693|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'ResourceDb' on server '(localdb)\mssqllocaldb'. 
+2022-07-06 17:58:19.1809|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ResourceApi.Controllers.TestsController.GetTests (ResourceApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6885.1218ms. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-07-06 17:58:19.1809|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2022-07-06 17:58:19.1809|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-07-06 17:58:19.1809|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-07-06 17:58:19.1809|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-07-06 17:58:19.1809|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2022-07-06 17:58:19.1809|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.String'. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:58:19.1809|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-07-06 17:58:19.1809|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ResourceApi.Controllers.TestsController.GetTests (ResourceApi) in 6922.2055ms 
+2022-07-06 17:58:19.1809|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ResourceApi.Controllers.TestsController.GetTests (ResourceApi)' 
+2022-07-06 17:58:19.1809|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed. 
+2022-07-06 17:58:19.1809|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:9410/api/Tests/GetTests/0 - - - 200 - text/plain;+charset=utf-8 7041.3621ms 

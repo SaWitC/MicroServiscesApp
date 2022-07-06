@@ -13,8 +13,11 @@ questCount:number=0;-->
 
       <div class="form-group">
         <label class="text-white">Название</label>
-        <input type="text" class="form-control form-control-lg" placeholder="Title" name="Title" #Description="ngModel" [(ngModel)]="testService.formData.Title"
+        <input pattern="^.{3,100}$" type="text" class="form-control form-control-lg" placeholder="Title" name="Title" #Title="ngModel" [(ngModel)]="testService.formData.Title"
                required maxlength="100" />
+        <div [hidden]="Title.untouched||Title.valid " class="alert alert-danger">
+          Название не может быть короче 3 символов или длиннее 100
+        </div>
       </div>
       <div>
         <label class="text-white">Тест с подсказками</label>
@@ -22,9 +25,12 @@ questCount:number=0;-->
       </div>
 
       <div class="form-group">
-        <label class="text-white">Название</label>
-        <textarea rows="8" type="text" class="form-control form-control-lg" placeholder="Description" name="Description" #Description="ngModel" [(ngModel)]="testService.formData.Description"
-                  required maxlength="2000"> </textarea>
+        <label class="text-white">Описание</label>
+        <textarea rows="8"  type="text" class="form-control form-control-lg" placeholder="Description" name="Description" #Description="ngModel" [(ngModel)]="testService.formData.Description"
+                  required minlength="200" maxlength="2000"> </textarea>
+        <div [hidden]="Description.untouched ||Description.valid" class="alert alert-danger">
+          Описание должно быть не короче 200 символов и не длиннее 2000 символов
+        </div>
       </div>
 
       <div class="w-100">
@@ -40,7 +46,7 @@ questCount:number=0;-->
                required maxlength="100" />
       </div>
       <ng-template #urlNotNull>
-        <div class="row">
+        <div class="row mb-4">
           <div class="form-group col-9">
             <input type="text" class="form-control form-control-lg" placeholder="LogoImagePath" name="LogoImagePath" #LogoImagePath="ngModel" [(ngModel)]="testService.formData.LogoImagPath"
                    required maxlength="100" />

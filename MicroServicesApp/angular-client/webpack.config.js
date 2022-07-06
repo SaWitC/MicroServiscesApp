@@ -78,7 +78,7 @@ module.exports = {
   entry: {
     'polyfills': './src/polyfills.ts',
     'app': './src/main.ts'
-  },
+  }, 
   output: {
     path: path.resolve(__dirname, 'dist'),     // путь к каталогу выходных файлов - папка public
     publicPath: '/',

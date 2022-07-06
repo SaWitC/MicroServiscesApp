@@ -23,7 +23,7 @@ namespace IdentityApi.Controllers
         {
             _context = context;
         }
-        //[Authorize]
+        [Authorize]
         [HttpGet("[action]")]
         public async Task<IActionResult> TestF()
         {

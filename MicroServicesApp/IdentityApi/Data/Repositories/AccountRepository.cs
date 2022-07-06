@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 using IdentityApi.Data.Interfaces;
 using IdentityApi.Data.optionsModels;
 using IdentityApi.Models;
+using IdentityApi.ViewModels.Account;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -17,11 +19,13 @@ namespace IdentityApi.Data.Repositories
     {
         private readonly IOptions<AuthOptions> _options;
         private readonly UserManager<User> _userManager;
+        private readonly AppDbContext _context;
 
-        public AccountRepository(IOptions<AuthOptions> options, UserManager<User> userManager)
+        public AccountRepository(IOptions<AuthOptions> options, UserManager<User> userManager,AppDbContext context)
         {
             _options = options;
             _userManager = userManager;
+            _context = context;
         }
         public async Task<string> GenerateJWTToken(User user)
         {
@@ -51,6 +55,12 @@ namespace IdentityApi.Data.Repositories
                 signingCredentials: creditails
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public async Task<InfoAbutUserViewModel> GetInfoAboutUserByIdAsync(string Id)
+        {
+            //return _context.Users.FirstOrDefaultAsync(o => o.Id == Id).Select(o => { new InfoAbutUserViewModel { Email = o.Email, UserName = o.UserName, EmailConfirmed = o.EmailConfirmed, PhoneNumber = o.PhoneNumber }; });
+            return null;
         }
     }
 }

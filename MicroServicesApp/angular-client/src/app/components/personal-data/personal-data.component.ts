@@ -16,11 +16,14 @@ export class PersonalDataComponent implements OnInit {
     private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.auth.GetInfoAboutCurrentUser();
+    
+
     //if (this.auth.invalidLogin == true) {
     //  this.router.navigate(["/"]);
     //}
   }
-
+  openSectionNumber: number = 0;
   test() {
     //this.http.get('http://localhost:9410/api/Costomisation').subscribe(
     //  res => {
@@ -38,7 +41,9 @@ export class PersonalDataComponent implements OnInit {
       })
     }   
 
-
+  openSection(number: number) {
+    this.openSectionNumber = number;
+  }
 
   logOut() {
     this.auth.logOut();

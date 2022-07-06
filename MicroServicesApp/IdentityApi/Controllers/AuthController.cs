@@ -23,6 +23,8 @@ namespace IdentityApi.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+
+        public Guid Id => Guid.Parse(User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value);
         private readonly ILogger<AuthController> _logger;
         private readonly IAccountRepository _accountRepository;
         private readonly UserManager<User> _userManager;
@@ -94,12 +96,14 @@ namespace IdentityApi.Controllers
             }
             return Unauthorized();
         }
-        [Authorize(Roles = "user")]
+        [Authorize(AuthenticationSchemes = "Bearer")]
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetInfoAbutUser()
-        {
-            return Ok();
+        {       
+            //return Ok(await _accountRepository.GetInfoAboutUserByIdAsync(this.Id.ToString()));
+            return Ok(await _userManager.FindByIdAsync(this.Id.ToString()));
+
         }
     }
 }

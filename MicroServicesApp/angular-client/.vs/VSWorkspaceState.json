@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\colorpicker",
+    "\\src\\app\\components\\colorpicker\\colorpicker",
+    "\\src\\app\\components\\personal-data",
+    "\\src\\app\\components\\register",
+    "\\src\\app\\shared\\Models"
   ],
-  "SelectedNode": "\\src\\index.html",
+  "SelectedNode": "\\src\\app\\components\\colorpicker\\colorpicker\\colorpicker.component.html",
   "PreviewInSolutionExplorer": false
 }
